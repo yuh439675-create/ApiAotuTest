@@ -1,7 +1,8 @@
 """
 测试执行入口
 用法:
-    python Runner.py                          # 运行全部用例
+    python Runner.py                          # 运行全部用例 + 自动打开报告
+    python Runner.py --no-open                # 只生成报告，不打开（适合服务器/CI）
     python Runner.py -m smoke                 # 只运行冒烟用例
     python Runner.py -k test_login            # 关键字过滤
     python Runner.py --parallel               # 并行执行（自动检测 CPU 核数）
@@ -11,6 +12,8 @@
 import os
 import sys
 import glob
+import signal
+import subprocess
 import importlib
 import multiprocessing
 import pytest
@@ -18,7 +21,6 @@ from Config.config import Config
 
 
 def _check_plugin(module_name, pip_name):
-    """检查插件是否安装，未安装则提示并退出"""
     try:
         importlib.import_module(module_name)
         return True
@@ -33,11 +35,30 @@ def clean_screenshots():
         os.remove(f)
 
 
+def _kill_allure_serve():
+    """关闭之前残留的 allure open / serve 进程，防止内存泄漏"""
+    try:
+        result = subprocess.run(
+            ["pgrep", "-f", "allure.*open|allure.*serve"],
+            capture_output=True, text=True,
+        )
+        pids = result.stdout.strip().split("\n")
+        for pid in pids:
+            if pid.strip():
+                try:
+                    os.kill(int(pid.strip()), signal.SIGTERM)
+                except (ProcessLookupError, ValueError):
+                    pass
+        if any(p.strip() for p in pids):
+            print(f"[Runner] 已关闭 {len([p for p in pids if p.strip()])} 个残留 Allure 进程")
+    except FileNotFoundError:
+        pass
+
+
 def main():
     Config.ensure_dirs()
     clean_screenshots()
 
-    # 检查必要插件
     if not _check_plugin("allure_pytest", "allure-pytest"):
         sys.exit(1)
 
@@ -46,7 +67,10 @@ def main():
 
     args = sys.argv[1:]
 
-    # --parallel 快捷开关
+    no_open = "--no-open" in args
+    if no_open:
+        args.remove("--no-open")
+
     use_parallel = "--parallel" in args
     if use_parallel:
         args.remove("--parallel")
@@ -66,8 +90,20 @@ def main():
 
     exit_code = pytest.main(base_args + args)
 
+    # 生成报告
     os.system(f"allure generate {allure_result} -o {allure_report} --clean --lang zh")
-    os.system(f"allure open {allure_report} &")
+
+    if no_open:
+        print(f"\n[报告已生成] {allure_report}")
+        print(f"  查看报告: allure open {allure_report}\n")
+    else:
+        # 先关闭上一次残留的 allure open 进程，再启动新的
+        _kill_allure_serve()
+        subprocess.Popen(
+            ["allure", "open", allure_report],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
 
     sys.exit(exit_code)
 
