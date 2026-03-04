@@ -13,6 +13,16 @@ TOKEN_EXPIRE_SECONDS = 7200
 logger = logging.getLogger("test")
 
 
+def _display_nodeid(nodeid):
+    """将 nodeid 中的 \\uXXXX 转义还原为中文，便于控制台阅读"""
+    try:
+        if "\\u" in nodeid:
+            return nodeid.encode("utf-8").decode("unicode_escape")
+    except Exception:
+        pass
+    return nodeid
+
+
 @pytest.fixture(scope="session", autouse=True)
 def setup_dirs():
     Config.ensure_dirs()
@@ -74,12 +84,12 @@ def _track_test_perf(request):
     """
     perf.start_test()
     start = time.perf_counter()
-    logger.info(f">> 开始: {request.node.nodeid}")
+    logger.info(f">> 开始: {_display_nodeid(request.node.nodeid)}")
 
     yield
 
     total_ms = (time.perf_counter() - start) * 1000
-    logger.info(f"<< 结束: {request.node.nodeid}  用例耗时: {total_ms:.0f}ms")
+    logger.info(f"<< 结束: {_display_nodeid(request.node.nodeid)}  用例耗时: {total_ms:.0f}ms")
 
     # 生成该用例的接口耗时明细并 attach
     detail = perf.format_test_report()
