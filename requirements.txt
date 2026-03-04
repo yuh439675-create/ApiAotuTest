@@ -1,0 +1,27 @@
+# === 核心测试框架 ===
+pytest>=8.0.0
+allure-pytest>=2.14.0
+pytest-xdist>=3.5.0
+
+# === HTTP 请求 ===
+requests>=2.31.0
+urllib3>=2.0.0
+
+# === 数据处理 ===
+PyYAML>=6.0
+openpyxl>=3.1.0
+pandas>=2.0.0
+
+# === 数据库 ===
+PyMySQL>=1.1.0
+
+# === 日志 ===
+logzero>=1.7.0
+
+# === Allure 报告 ===
+allure-python-commons>=2.14.0
+
+# === 可选：移动端自动化 ===
+# Appium-Python-Client>=5.0.0
+# selenium>=4.20.0
+# playwright>=1.40.0

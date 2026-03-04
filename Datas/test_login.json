@@ -1,0 +1,20 @@
+{
+  "test_login_success": {
+    "desc": "正常登录",
+    "user": "yhb",
+    "expect_code": 200,
+    "expect_field": "data.loginCode"
+  },
+  "test_login_wrong_password": {
+    "desc": "错误密码登录",
+    "data": {
+      "username": "admin01",
+      "password": "wrong_password",
+      "captcha": "666666",
+      "uuid": "d3785d19-d127-47c6-8f5e-b0c19c2ef91f",
+      "adminType": 1
+    },
+    "expect_code": 200,
+    "expect_msg": "error"
+  }
+}

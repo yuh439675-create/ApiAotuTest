@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python Runner.py:*)",
+      "Bash(python:*)",
+      "Bash(python -m py_compile:*)",
+      "Bash(pytest:*)",
+      "Bash(cat:*)",
+      "Bash(ffprobe:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}

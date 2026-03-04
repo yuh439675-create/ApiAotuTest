@@ -1,0 +1,15 @@
+# 数据驱动测试用例数据
+# 每条数据代表一个测试场景
+
+- case_name: "查询接口-正常请求"
+  method: GET
+  path: "sys/menu/nav"
+  params: null
+  expect_status: 200
+
+- case_name: "查询接口-缺少参数"
+  method: GET
+  path: "sys/menu/nav"
+  params:
+    page: 1
+  expect_status: 200
