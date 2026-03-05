@@ -1,0 +1,17 @@
+# key可以照着这个来，value都是假的(*^▽^*)，根据自己项目来
+# 内容暂时这么多，格式需要固定这个，方便后面读取，具体怎么用下面会讲到
+# 复制此文件为 Login.yaml 并填入真实配置
+url: 'https://your-domain.com/api/'
+
+user:
+  yhb:
+    username: your_username
+    password: your_password
+    code: 666666
+
+mysql:
+  db: your_db
+  host: 127.0.0.1
+  password: 'your_password'
+  port: 3306
+  user: root

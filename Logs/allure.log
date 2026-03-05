@@ -1,0 +1,27 @@
+2026-03-04 16:15:54 | INFO    | test:87 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-正常请求]
+2026-03-04 16:15:54 | DEBUG   | urllib3.connectionpool:1049 | Starting new HTTPS connection (1): o3khjyqv.reelchain.art:443
+2026-03-04 16:16:15 | DEBUG   | urllib3.connectionpool:544 | https://o3khjyqv.reelchain.art:443 "POST /sqx_fast/sys/login HTTP/1.1" 522 7282
+2026-03-04 16:16:15 | INFO    | test:92 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-正常请求]  用例耗时: 20381ms
+2026-03-04 16:16:15 | INFO    | test:87 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-缺少参数]
+2026-03-04 16:16:35 | DEBUG   | urllib3.connectionpool:544 | https://o3khjyqv.reelchain.art:443 "POST /sqx_fast/sys/login HTTP/1.1" 522 7282
+2026-03-04 16:16:35 | INFO    | test:92 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-缺少参数]  用例耗时: 19925ms
+2026-03-04 16:16:35 | INFO    | test:87 | >> 开始: Test_Case/test_login.py::TestLogin::test_login_success
+2026-03-04 16:16:55 | DEBUG   | urllib3.connectionpool:544 | https://o3khjyqv.reelchain.art:443 "POST /sqx_fast/sys/login HTTP/1.1" 522 7282
+2026-03-04 16:16:55 | INFO    | test:92 | << 结束: Test_Case/test_login.py::TestLogin::test_login_success  用例耗时: 19911ms
+2026-03-04 16:16:55 | INFO    | test:87 | >> 开始: Test_Case/test_login.py::TestLogin::test_login_wrong_password
+2026-03-04 16:17:15 | DEBUG   | urllib3.connectionpool:544 | https://o3khjyqv.reelchain.art:443 "POST /sqx_fast/sys/login HTTP/1.1" 522 7282
+2026-03-04 16:17:15 | INFO    | test:92 | << 结束: Test_Case/test_login.py::TestLogin::test_login_wrong_password  用例耗时: 20030ms
+2026-03-04 16:17:15 | INFO    | test:87 | >> 开始: Test_Case/test_login.py::TestTokenManagement::test_token_cache
+2026-03-04 16:17:34 | DEBUG   | urllib3.connectionpool:544 | https://o3khjyqv.reelchain.art:443 "POST /sqx_fast/sys/login HTTP/1.1" 522 7282
+2026-03-04 16:17:34 | INFO    | test:92 | << 结束: Test_Case/test_login.py::TestTokenManagement::test_token_cache  用例耗时: 19926ms
+2026-03-04 16:17:34 | INFO    | test:87 | >> 开始: Test_Case/test_login.py::TestTokenManagement::test_authenticated_request
+2026-03-04 16:17:54 | DEBUG   | urllib3.connectionpool:544 | https://o3khjyqv.reelchain.art:443 "POST /sqx_fast/sys/login HTTP/1.1" 522 7282
+2026-03-04 16:17:54 | INFO    | test:92 | << 结束: Test_Case/test_login.py::TestTokenManagement::test_authenticated_request  用例耗时: 19983ms
+2026-03-04 16:17:54 | INFO    | test:105 | 
+===============================================================================================
+  接口性能统计  |  总请求: 6  |  总耗时: 119996ms
+===============================================================================================
+接口                                                    次数      P50      P90      P99      Max
+-----------------------------------------------------------------------------------------------
+POST https://o3khjyqv.reelchain.art/sqx_fast/sy...     6   19924ms   20336ms   20336ms   20336ms
+===============================================================================================

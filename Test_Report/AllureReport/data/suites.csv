@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"验证携带 token 的 API 客户端能正常发起请求","19949","Token 用于认证接口","Test_Case","2026-03-04","broken","2026-03-04","TestTokenManagement","test_login","",""
+"根据 YAML 数据驱动执行接口测试","20342","查询接口-正常请求","Test_Case","2026-03-04","broken","2026-03-04","TestApiDataDriven","test_api_demo","",""
+"根据 YAML 数据驱动执行接口测试","19895","查询接口-缺少参数","Test_Case","2026-03-04","broken","2026-03-04","TestApiDataDriven","test_api_demo","",""
+"验证多次获取同一用户 token 返回相同值（缓存生效）","19906","Token 缓存与复用验证","Test_Case","2026-03-04","broken","2026-03-04","TestTokenManagement","test_login","",""
+"验证错误密码登录时的响应","20022","使用错误密码登录","Test_Case","2026-03-04","failed","2026-03-04","TestLogin","test_login","",""
+"验证正常登录流程，能获取到 token","19905","使用正确账号密码登录","Test_Case","2026-03-04","failed","2026-03-04","TestLogin","test_login","",""

@@ -1,33 +1,33 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-dist/
-build/
-*.egg
-
-# 虚拟环境
-venv/
-.venv/
-env/
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-.DS_Store
-
-# 敏感文件
-Token_dir/
-Config/Login.yaml
-
-# 测试产物
-Test_Report/AllureResult/
-Test_Report/AllureReport/
-Test_Report/screenshots/*.png
-Logs/*.log
-
-# 临时文件
-*.tmp
-*.bak
+## Python
+#__pycache__/
+#*.py[cod]
+#*.egg-info/
+#dist/
+#build/
+#*.egg
+#
+## 虚拟环境
+#venv/
+#.venv/
+#env/
+#
+## IDE
+#.idea/
+#.vscode/
+#*.swp
+#*.swo
+#.DS_Store
+#
+## 敏感文件
+#Token_dir/
+#Config/Login.yaml
+#
+## 测试产物
+#Test_Report/AllureResult/
+#Test_Report/AllureReport/
+#Test_Report/screenshots/*.png
+#Logs/*.log
+#
+## 临时文件
+#*.tmp
+#*.bak
