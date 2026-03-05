@@ -57,3 +57,4 @@
 2026-03-05 12:35:59 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
 2026-03-05 13:50:27 | WARNING | api_test:38 | [慢接口] POST https://h5.lollipop.im/sqx_fast/app/Login/emailLogin 耗时 7.8秒
 2026-03-05 17:08:24 | WARNING | api_test:38 | [慢接口] GET https://www.testshort.top/sqx_fast/app/user/selectUserById 耗时 12.4秒
+2026-03-05 18:04:46 | WARNING | api_test:38 | [慢接口] GET https://www.testshort.top/sqx_fast/app/user/selectUserById 耗时 12.1秒
