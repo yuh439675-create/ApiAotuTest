@@ -1,3 +1,0 @@
-[32mINFO    [0m test:conftest.py:128 >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-缺少密码参数]
-[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://www.testshort.top:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
-[32mINFO    [0m test:conftest.py:133 << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-缺少密码参数]  用例耗时: 0.5秒

@@ -67,18 +67,20 @@ class TestScenarioDemo:
         # ---------- 步骤 2：用上一步结果调用接口 ----------
         with allure.step("2. 用上一步结果调用下一接口（如订单列表）"):
             resp2 = client.get(ScenarioPaths.ORDER_LIST)
-            print(resp2.json())
             assert_response(resp2).status_ok()
+            print(resp2.json())
+
 
         # ---------- 步骤 3：提现接口 ----------
-        with allure.step("3. 用上一步结果调用下一接口（如订单列表）"):
+        with allure.step("3. 提现接口"):
             resp3 = client.post(ScenarioPaths.creditsExchangeToLolWithdraw, json={
                 'address': "0xb738c553a56576a085aa9e33d827dc4b78310521",
                 'chainId': '66',
                 'integral': 2000
             })
-            print(resp3.json())
             assert_response(resp3).status_ok()
+            print(resp3.json())
+
 
 
 

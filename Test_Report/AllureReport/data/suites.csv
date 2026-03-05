@@ -1,5 +1,6 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"根据 YAML 数据驱动执行接口测试（登录接口无需 token，用 http）","565","登录接口-密码为空","Test_Case","2026-03-05","failed","2026-03-05","TestApiDataDriven","test_api_demo","",""
-"根据 YAML 数据驱动执行接口测试（登录接口无需 token，用 http）","543","登录接口-账号为空","Test_Case","2026-03-05","passed","2026-03-05","TestApiDataDriven","test_api_demo","",""
-"根据 YAML 数据驱动执行接口测试（登录接口无需 token，用 http）","1195","登录接口-正常请求","Test_Case","2026-03-05","passed","2026-03-05","TestApiDataDriven","test_api_demo","",""
-"根据 YAML 数据驱动执行接口测试（登录接口无需 token，用 http）","502","登录接口-缺少密码参数","Test_Case","2026-03-05","passed","2026-03-05","TestApiDataDriven","test_api_demo","",""
+"
+典型场景：先拿到已登录客户端，再依次调用多个依赖 token 的接口，
+中间结果（如 user_id）传给后续请求。
+","1459","场景：登录 → 获取用户信息 → 依赖结果调用下一接口","Test_Case","2026-03-05","passed","2026-03-05","TestScenarioDemo","test_scenario_demo","",""
+"最小可运行场景：仅「登录 → 用 token 发一次请求」，无其他接口依赖。","1710","场景：登录并验证 token 可用于请求（不依赖其他接口）","Test_Case","2026-03-05","passed","2026-03-05","TestScenarioDemo","test_scenario_demo","",""

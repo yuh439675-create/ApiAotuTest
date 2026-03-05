@@ -81,11 +81,12 @@ class Requests:
                 allure.attach(
                     f"{format_duration(elapsed_ms)} (状态码: {resp.status_code})",
                     f"耗时 | {method} {path}",
+                    allure.attachment_type.TEXT,
                 )
                 return resp
             except requests.RequestException as exc:
                 elapsed_ms = (time.perf_counter() - start) * 1000
-                allure.attach(f"请求失败 ({format_duration(elapsed_ms)}): {exc}", "请求异常")
+                allure.attach(f"请求失败 ({format_duration(elapsed_ms)}): {exc}", "请求异常", allure.attachment_type.TEXT)
                 raise Exception(f"{method} 请求失败: {url} -> {exc}")
 
     def get(self, path, params=None, headers=None, **kw):

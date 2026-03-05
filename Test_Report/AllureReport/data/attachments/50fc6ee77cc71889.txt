@@ -1,0 +1,5 @@
+[32mINFO    [0m test:conftest.py:129 >> 开始: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_then_chain_apis
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://www.testshort.top:443 "GET /sqx_fast/app/user/selectUserById HTTP/1.1" 200 None
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://www.testshort.top:443 "GET /sqx_fast/app/cash/getCryptoBalance HTTP/1.1" 200 None
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://www.testshort.top:443 "POST /sqx_fast/app/integral/creditsExchangeToLolWithdraw HTTP/1.1" 200 None
+[32mINFO    [0m test:conftest.py:134 << 结束: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_then_chain_apis  用例耗时: 1.5秒
