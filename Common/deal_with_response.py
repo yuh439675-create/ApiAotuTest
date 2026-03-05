@@ -5,6 +5,7 @@
 - 响应体截断到 2KB 避免大 JSON 拖慢报告
 """
 import allure
+from Common.perf import format_duration
 from allure_commons._allure import StepContext
 
 _ALLURE_ACTIVE = None
@@ -33,7 +34,7 @@ def deal_with_res(data, res, request_url, request_method, request_headers, respo
         allure.attach(request_method, "请求的方法")
         allure.attach(str(request_headers) if request_headers else "{}", "请求的Headers")
         allure.attach(str(data) if data else "", "入参报文")
-        allure.attach(f"{response_time:.2f} ms", "响应时间")
+        allure.attach(format_duration(response_time), "响应时间")
 
         status_code = getattr(res, "status_code", None) or getattr(res, "status", None)
         allure.attach(str(status_code), "状态码")

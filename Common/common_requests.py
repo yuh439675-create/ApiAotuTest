@@ -12,7 +12,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from Common.yaml_config import GetConfig
 from Common.deal_with_response import deal_with_res
-from Common.perf import perf
+from Common.perf import perf, format_duration
 
 _session = None
 _session_lock = threading.Lock()
@@ -79,13 +79,13 @@ class Requests:
                 deal_with_res(req_data, resp, url, method, req_headers, elapsed_ms)
 
                 allure.attach(
-                    f"{elapsed_ms:.0f}ms (状态码: {resp.status_code})",
+                    f"{format_duration(elapsed_ms)} (状态码: {resp.status_code})",
                     f"耗时 | {method} {path}",
                 )
                 return resp
             except requests.RequestException as exc:
                 elapsed_ms = (time.perf_counter() - start) * 1000
-                allure.attach(f"请求失败 ({elapsed_ms:.0f}ms): {exc}", "请求异常")
+                allure.attach(f"请求失败 ({format_duration(elapsed_ms)}): {exc}", "请求异常")
                 raise Exception(f"{method} 请求失败: {url} -> {exc}")
 
     def get(self, path, params=None, headers=None, **kw):

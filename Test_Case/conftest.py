@@ -7,11 +7,31 @@ import pytest
 import allure
 from Common.login import login
 from Common.common_requests import Requests, AuthClient
+from Common.yaml_config import GetConfig
 from Config.config import Config
-from Common.perf import perf
+from Common.perf import perf, format_duration
 
 TOKEN_EXPIRE_SECONDS = 7200
 logger = logging.getLogger("test")
+
+
+def _get_nested_value(data, field_path):
+    """
+    根据 . 分隔的路径从嵌套字典中提取值
+    例如: _get_nested_value({"data": {"token": "xxx"}}, "data.token") -> "xxx"
+    """
+    keys = field_path.split(".")
+    value = data
+    for key in keys:
+        if isinstance(value, dict):
+            value = value.get(key)
+        elif isinstance(value, list) and key.isdigit():
+            value = value[int(key)]
+        else:
+            return None
+        if value is None:
+            return None
+    return value
 
 
 def _decode_unicode(s):
@@ -48,7 +68,26 @@ def token():
                 return _cache[user]
 
         resp = login(user)
-        new_token = resp.json()["data"]["loginCode"]
+        try:
+            resp_json = resp.json()
+        except Exception as e:
+            logger.error("登录响应非 JSON，状态码: %s, 响应体: %s", resp.status_code, resp.text[:500] if resp.text else "(空)")
+            raise ValueError(f"登录响应解析失败: {e}\n状态码: {resp.status_code}\n响应体: {resp.text[:500]}") from e
+
+        # 从配置读取 token 字段路径
+        token_field = GetConfig().get_login_config()["token_field"]
+        new_token = _get_nested_value(resp_json, token_field)
+
+        if new_token is None:
+            err_msg = (
+                f"登录失败或 token 字段配置错误。\n"
+                f"  状态码: {resp.status_code}\n"
+                f"  配置的 token_field: {token_field}\n"
+                f"  实际响应: {resp_json}"
+            )
+            logger.error(err_msg)
+            print("\n" + "=" * 60 + "\n[登录失败] " + err_msg + "\n" + "=" * 60)
+            raise ValueError(err_msg)
 
         with open(token_path, "w") as f:
             json.dump({"token": new_token, "timestamp": time.time()}, f)
@@ -91,12 +130,12 @@ def _track_test_perf(request):
     yield
 
     total_ms = (time.perf_counter() - start) * 1000
-    logger.info(f"<< 结束: {request.node.nodeid}  用例耗时: {total_ms:.0f}ms")
+    logger.info(f"<< 结束: {request.node.nodeid}  用例耗时: {format_duration(total_ms)}")
 
     # 生成该用例的接口耗时明细并 attach
     detail = perf.format_test_report()
     if detail:
-        summary = f"用例总耗时: {total_ms:.0f}ms\n\n{detail}"
+        summary = f"用例总耗时: {format_duration(total_ms)}\n\n{detail}"
         allure.attach(summary, "接口性能明细", allure.attachment_type.TEXT)
 
 

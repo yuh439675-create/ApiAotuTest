@@ -85,7 +85,7 @@ class YamlReader:
 
 if __name__ == '__main__':
     try:
-        yaml_path = os.path.join(Config.Datas_path, 'data_yaml_002.yaml')
+        yaml_path = os.path.join(Config.Datas_path, 'test_api_data.yaml')
         reader = YamlReader(yaml_path)
 
         # 直接读取

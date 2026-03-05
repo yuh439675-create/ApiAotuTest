@@ -4,6 +4,7 @@
 """
 import allure
 from Common.logger import log
+from Common.perf import format_duration
 
 _SENTINEL = object()
 
@@ -76,7 +77,7 @@ class ResponseAssert:
 
     def response_time_less_than(self, ms):
         elapsed = self.resp.elapsed.total_seconds() * 1000
-        assert elapsed < ms, f"响应 {elapsed:.0f}ms 超过阈值 {ms}ms"
+        assert elapsed < ms, f"响应 {format_duration(elapsed)} 超过阈值 {format_duration(ms)}"
         return self
 
     # ── 工具方法 ──

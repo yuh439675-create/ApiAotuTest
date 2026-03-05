@@ -12,6 +12,14 @@ from Common.logger import log
 SLOW_THRESHOLD_MS = 3000
 
 
+def format_duration(ms):
+    """将毫秒转为「X.X秒」格式，如 3700 -> 3.7秒"""
+    if ms is None or ms < 0:
+        return "0.0秒"
+    sec = ms / 1000
+    return f"{sec:.1f}秒"
+
+
 class PerfCollector:
     """线程安全的性能收集器，支持全局 + 用例级双维度"""
 
@@ -27,7 +35,7 @@ class PerfCollector:
             self._test_records.append((method, url, elapsed_ms))
 
         if elapsed_ms > SLOW_THRESHOLD_MS:
-            log.warning(f"[慢接口] {key} 耗时 {elapsed_ms:.0f}ms")
+            log.warning(f"[慢接口] {key} 耗时 {format_duration(elapsed_ms)}")
 
     # ── 用例级别 ──
 
@@ -55,10 +63,10 @@ class PerfCollector:
         for i, (method, url, ms) in enumerate(records, 1):
             display_url = url if len(url) <= 55 else url[:52] + "..."
             tag = " ⚠️慢" if ms > SLOW_THRESHOLD_MS else ""
-            lines.append(f"{i:<5} {method:<7} {display_url:<55} {ms:>8.0f}ms{tag}")
+            lines.append(f"{i:<5} {method:<7} {display_url:<55} {format_duration(ms):>10}{tag}")
 
         lines.append("-" * 80)
-        lines.append(f"{'合计':<5} {'':<7} {f'共 {len(records)} 个请求':<55} {total_ms:>8.0f}ms")
+        lines.append(f"{'合计':<5} {'':<7} {f'共 {len(records)} 个请求':<55} {format_duration(total_ms):>10}")
         return "\n".join(lines)
 
     # ── 全局统计 ──
@@ -76,9 +84,9 @@ class PerfCollector:
         lines = [
             "",
             "=" * 95,
-            f"  接口性能统计  |  总请求: {total_requests}  |  总耗时: {total_time:.0f}ms",
+            f"  接口性能统计  |  总请求: {total_requests}  |  总耗时: {format_duration(total_time)}",
             "=" * 95,
-            f"{'接口':<50} {'次数':>5} {'P50':>8} {'P90':>8} {'P99':>8} {'Max':>8}",
+            f"{'接口':<50} {'次数':>5} {'P50':>10} {'P90':>10} {'P99':>10} {'Max':>10}",
             "-" * 95,
         ]
 
@@ -90,7 +98,7 @@ class PerfCollector:
             mx = max(times)
             dk = key if len(key) <= 50 else key[:47] + "..."
             lines.append(
-                f"{dk:<50} {n:>5} {p50:>7.0f}ms {p90:>7.0f}ms {p99:>7.0f}ms {mx:>7.0f}ms"
+                f"{dk:<50} {n:>5} {format_duration(p50):>10} {format_duration(p90):>10} {format_duration(p99):>10} {format_duration(mx):>10}"
             )
 
         lines.append("=" * 95)

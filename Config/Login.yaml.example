@@ -1,11 +1,26 @@
 # 复制此文件为 Login.yaml 并填入真实配置
 url: 'https://your-domain.com/api/'
 
+# 登录接口配置（按实际接口调整）
+login:
+  path: "sqx_fast/app/Login/emailLogin"    # 登录接口路径
+  token_field: "data.token"                 # token 在响应中的字段路径
+  # 常见格式示例:
+  #   data.token         -> {"data": {"token": "xxx"}}
+  #   data.loginCode     -> {"data": {"loginCode": "xxx"}}
+  #   token              -> {"token": "xxx"}
+  #   result.accessToken -> {"result": {"accessToken": "xxx"}}
+
+# user 配置说明：必填 username、password，其余按需自由添加
 user:
   yhb:
     username: your_username
     password: your_password
-    code: 666666
+    # 以下为可选，按项目需要配置：
+    # code: 666666        # 验证码，会映射为请求体的 captcha
+    # captcha: xxx        # 或直接写 captcha 字段
+    # email: xxx@xx.com   # 邮箱登录时可加
+    # 任意其他字段都会合并到登录请求体中
 
 mysql:
   db: your_db

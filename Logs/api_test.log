@@ -1,28 +1,57 @@
-2026-03-04 15:58:16 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20115ms
-2026-03-04 15:58:36 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20220ms
-2026-03-04 15:58:56 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19622ms
-2026-03-04 15:59:16 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19972ms
-2026-03-04 15:59:36 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20115ms
-2026-03-04 15:59:53 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20651ms
-2026-03-04 15:59:56 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19752ms
-2026-03-04 16:00:13 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19901ms
-2026-03-04 16:00:33 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19741ms
-2026-03-04 16:00:53 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19951ms
-2026-03-04 16:04:35 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20596ms
-2026-03-04 16:04:55 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19913ms
-2026-03-04 16:05:15 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19926ms
-2026-03-04 16:05:35 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19963ms
-2026-03-04 16:05:55 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19929ms
-2026-03-04 16:06:15 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19947ms
-2026-03-04 16:07:04 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20192ms
-2026-03-04 16:07:24 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20138ms
-2026-03-04 16:07:44 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19752ms
-2026-03-04 16:08:04 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19903ms
-2026-03-04 16:08:24 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19952ms
-2026-03-04 16:08:44 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19921ms
-2026-03-04 16:16:15 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20336ms
-2026-03-04 16:16:35 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19891ms
-2026-03-04 16:16:55 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19904ms
-2026-03-04 16:17:15 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 20017ms
-2026-03-04 16:17:34 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19904ms
-2026-03-04 16:17:54 | WARNING | api_test:30 | [慢接口] POST https://o3khjyqv.reelchain.art/sqx_fast/sys/login 耗时 19944ms
+2026-03-05 11:35:33 | INFO    | api_test:104 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 11:35:33 | INFO    | api_test:104 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 11:35:33 | INFO    | api_test:104 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 11:35:34 | INFO    | api_test:104 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 11:39:44 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 11:39:44 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 11:39:45 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 11:39:45 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 11:40:25 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 11:40:25 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 11:40:25 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 11:40:26 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:16:25 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:16:25 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:16:26 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:16:26 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:18:41 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:18:41 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:18:41 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:19:39 | WARNING | api_test:38 | [慢接口] POST https://h5.lollipop.im/sqx_fast/app/Login/emailLogin 耗时 3.9秒
+2026-03-05 12:19:39 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:19:39 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:19:40 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:19:52 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:19:52 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:19:53 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:21:06 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:21:06 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:21:06 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:21:07 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:23:22 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:23:22 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:23:22 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:23:23 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:24:18 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:24:18 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:24:19 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:24:54 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:24:54 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:24:54 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:24:55 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:32:41 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:32:41 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:32:42 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:32:42 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:32:53 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:32:53 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:32:54 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:32:54 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:33:59 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:34:00 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:34:00 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:34:00 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:35:58 | INFO    | api_test:105 | [登录接口-正常请求] 200 | {"msg":"success","code":0,"expire":604800,"user":{"userId":181822,"userName":"每天测试专用账号1@qq.com","emailName":"1@qq.com","phone":"+5526123456789","avatar":"https://oss.reelchain.art/20251231/782c75c79d2943858f5c992a7f6c8079.png","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef
+2026-03-05 12:35:58 | INFO    | api_test:105 | [登录接口-缺少密码参数] 200 | {"msg":"Incorrect account or password","code":500}
+2026-03-05 12:35:59 | INFO    | api_test:105 | [登录接口-账号为空] 200 | {"msg":"Account does not exist","code":500}
+2026-03-05 12:35:59 | INFO    | api_test:105 | [登录接口-密码为空] 200 | {"msg":"Incorrect account or password","code":500}

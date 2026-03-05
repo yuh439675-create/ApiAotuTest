@@ -1,13 +1,17 @@
 # key可以照着这个来，value都是假的(*^▽^*)，根据自己项目来
 # 内容暂时这么多，格式需要固定这个，方便后面读取，具体怎么用下面会讲到
 # 复制此文件为 Login.yaml 并填入真实配置
-url: 'https://your-domain.com/api/'
+url: 'https://h5.lollipop.im/'
+
+# 登录接口配置（可自由调整）
+login:
+  path: "sqx_fast/app/Login/emailLogin"    # 登录接口路径
+  token_field: "token"                      # token 在响应中的字段路径（顶层）
 
 user:
   yhb:
-    username: your_username
-    password: your_password
-    code: 666666
+    username: yuh439675@gmail.com
+    password: 123456
 
 mysql:
   db: your_db

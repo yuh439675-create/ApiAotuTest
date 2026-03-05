@@ -40,9 +40,22 @@ class GetConfig:
         self._load()
 
     def get_username_password(self, user):
+        """返回 (username, password, code)，code 可选"""
         try:
             u = self.env["user"][user]
-            return u["username"], u["password"], u["code"]
+            code = u.get("code", "")
+            return u["username"], u["password"], code
+        except KeyError:
+            raise KeyError(f"配置文件中未找到用户 '{user}' 的信息")
+
+    def get_user_config(self, user):
+        """
+        返回用户完整配置，支持自由扩展字段。
+        必填: username, password
+        可选: code, captcha 或任意其他字段，按需配置即可
+        """
+        try:
+            return dict(self.env["user"][user])
         except KeyError:
             raise KeyError(f"配置文件中未找到用户 '{user}' 的信息")
 
@@ -57,6 +70,20 @@ class GetConfig:
 
     def get_value(self, key, default=None):
         return self.env.get(key, default)
+
+    def get_login_config(self):
+        """
+        获取登录相关配置
+        返回: {
+            "path": 登录接口路径,
+            "token_field": token 在响应中的字段路径（支持 . 分隔的嵌套路径）
+        }
+        """
+        login_cfg = self.env.get("login", {})
+        return {
+            "path": login_cfg.get("path", "sqx_fast/app/Login/emailLogin"),
+            "token_field": login_cfg.get("token_field", "data.token"),
+        }
 
 
 if __name__ == "__main__":

@@ -1,4 +1,0 @@
-[32mINFO    [0m test:conftest.py:87 >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-正常请求]
-[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): o3khjyqv.reelchain.art:443
-[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://o3khjyqv.reelchain.art:443 "POST /sqx_fast/sys/login HTTP/1.1" 522 7282
-[32mINFO    [0m test:conftest.py:92 << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-正常请求]  用例耗时: 20381ms

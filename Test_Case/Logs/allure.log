@@ -1,3 +1,21 @@
-2026-03-04 16:28:12 | INFO    | test:89 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-正常请求]
-2026-03-04 16:28:12 | DEBUG   | urllib3.connectionpool:1049 | Starting new HTTPS connection (1): o3khjyqv.reelchain.art:443
-2026-03-04 16:28:17 | INFO    | test:94 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-正常请求]  用例耗时: 4946ms
+2026-03-05 12:32:40 | INFO    | test:128 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-正常请求]
+2026-03-05 12:32:40 | DEBUG   | urllib3.connectionpool:1049 | Starting new HTTPS connection (1): h5.lollipop.im:443
+2026-03-05 12:32:41 | DEBUG   | urllib3.connectionpool:544 | https://h5.lollipop.im:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
+2026-03-05 12:32:41 | INFO    | test:133 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-正常请求]  用例耗时: 1.4秒
+2026-03-05 12:32:41 | INFO    | test:128 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-缺少密码参数]
+2026-03-05 12:32:41 | DEBUG   | urllib3.connectionpool:544 | https://h5.lollipop.im:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
+2026-03-05 12:32:41 | INFO    | test:133 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-缺少密码参数]  用例耗时: 0.4秒
+2026-03-05 12:32:41 | INFO    | test:128 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-账号为空]
+2026-03-05 12:32:42 | DEBUG   | urllib3.connectionpool:544 | https://h5.lollipop.im:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
+2026-03-05 12:32:42 | INFO    | test:133 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-账号为空]  用例耗时: 0.3秒
+2026-03-05 12:32:42 | INFO    | test:128 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-密码为空]
+2026-03-05 12:32:42 | DEBUG   | urllib3.connectionpool:544 | https://h5.lollipop.im:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
+2026-03-05 12:32:42 | INFO    | test:133 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-密码为空]  用例耗时: 0.3秒
+2026-03-05 12:32:42 | INFO    | test:146 | 
+===============================================================================================
+  接口性能统计  |  总请求: 4  |  总耗时: 2.4秒
+===============================================================================================
+接口                                                    次数        P50        P90        P99        Max
+-----------------------------------------------------------------------------------------------
+POST https://h5.lollipop.im/sqx_fast/app/Login/...     4       0.4秒       1.4秒       1.4秒       1.4秒
+===============================================================================================

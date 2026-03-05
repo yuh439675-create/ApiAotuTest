@@ -7,23 +7,33 @@ def login(user):
     封装登录接口
     :param user: yaml 文件里账号密码的用户名称
     :return: requests.Response 对象（支持 .json()）
-    """
-    username, password, code = GetConfig().get_username_password(user)
 
+    配置说明（Login.yaml 的 user.xxx 下）:
+    - 必填: username, password
+    - 可选: 其他字段会原样合并到请求体
+    """
+    cfg = GetConfig()
+    u = cfg.get_user_config(user)
+
+    # 基础字段（username 映射为 emailName）
     data = {
-        "username": username,
-        "password": password,
-        "captcha": code,
-        "uuid": "d3785d19-d127-47c6-8f5e-b0c19c2ef91f",
-        "adminType": 1,
+        "emailName": u["username"],
+        "password": u["password"],
+        "isFirebaseEmail": "0",
     }
+
+    # 合并用户配置中的其他字段
+    for k, v in u.items():
+        if k not in ("username", "password") and v is not None:
+            data[k] = v
 
     headers = {
         "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
     }
 
-    return Requests().post("sys/login", headers=headers, json=data)
+    login_path = cfg.get_login_config()["path"]
+    return Requests().post(login_path, headers=headers, json=data)
 
 
 if __name__ == "__main__":
