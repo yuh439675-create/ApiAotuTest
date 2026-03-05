@@ -1,0 +1,2 @@
+[32mINFO    [0m test:conftest.py:89 >> 开始: Test_Case/test_login.py::TestTokenManagement::test_authenticated_request
+[32mINFO    [0m test:conftest.py:94 << 结束: Test_Case/test_login.py::TestTokenManagement::test_authenticated_request  用例耗时: 4ms

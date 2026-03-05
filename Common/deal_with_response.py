@@ -26,9 +26,20 @@ def _is_allure_active():
     return _ALLURE_ACTIVE
 
 
+# ANSI 颜色：200 天空蓝，非 200 橙色
+_COLOR_SKY_BLUE = "\033[96m"   # 天空蓝/亮青
+_COLOR_ORANGE = "\033[38;5;208m"  # 橙色 (256色)
+_COLOR_RESET = "\033[0m"
+
+
 def _log_to_console(request_url, request_method, request_headers, data, status_code, response_time, body):
-    """控制台输出请求/响应信息，格式与报告一致"""
+    """控制台输出请求/响应信息，格式与报告一致；状态码 200 天空蓝，非 200 橙色"""
     sep = "-" * 80
+    status_line = f"状态码: {status_code}"
+    if status_code == 200:
+        status_line = f"{_COLOR_SKY_BLUE}{status_line}{_COLOR_RESET}"
+    else:
+        status_line = f"{_COLOR_ORANGE}{status_line}{_COLOR_RESET}"
     lines = [
         sep,
         f"请求的URL: {request_url}",
@@ -36,7 +47,7 @@ def _log_to_console(request_url, request_method, request_headers, data, status_c
         f"请求的Headers: {request_headers or {}}",
         f"入参报文: {data or ''}",
         sep,
-        f"状态码: {status_code}",
+        status_line,
         f"响应时间: {response_time}",
         f"响应报文:\n{body}",
         sep,
