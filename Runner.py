@@ -37,6 +37,43 @@ def clean_screenshots():
         os.remove(f)
 
 
+def _allure_available():
+    """检查 allure 命令行是否已安装"""
+    try:
+        subprocess.run(["allure", "--version"], capture_output=True, check=True)
+        return True
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return False
+
+
+def _install_allure():
+    """未安装时自动安装 Allure CLI（macOS 用 brew，否则用 npm）"""
+    print("\n[Runner] 未检测到 Allure CLI，正在尝试自动安装...")
+    if sys.platform == "darwin":
+        # macOS: 优先 brew
+        try:
+            if subprocess.run(["which", "brew"], capture_output=True).returncode == 0:
+                print("[Runner] 使用 Homebrew 安装 allure...")
+                ret = subprocess.run(["brew", "install", "allure"], capture_output=False)
+                if ret.returncode == 0:
+                    return True
+        except FileNotFoundError:
+            pass
+    # 通用: npm 安装（需已安装 Node.js）
+    try:
+        if subprocess.run(["which", "npm"], capture_output=True).returncode == 0:
+            print("[Runner] 使用 npm 安装 allure-commandline...")
+            ret = subprocess.run(
+                ["npm", "install", "-g", "allure-commandline"],
+                capture_output=False,
+            )
+            if ret.returncode == 0:
+                return True
+    except FileNotFoundError:
+        pass
+    return False
+
+
 def _kill_allure_serve():
     """关闭之前残留的 allure open / serve 进程，防止内存泄漏"""
     try:
@@ -92,20 +129,25 @@ def main():
 
     exit_code = pytest.main(base_args + args)
 
-    # 生成报告
-    os.system(f"allure generate {allure_result} -o {allure_report} --clean --lang zh")
-
-    if no_open:
-        print(f"\n[报告已生成] {allure_report}")
-        print(f"  查看报告: allure open {allure_report}\n")
+    # 生成报告（未安装则自动安装 Allure CLI）
+    if not _allure_available():
+        _install_allure()
+    if _allure_available():
+        os.system(f"allure generate {allure_result} -o {allure_report} --clean --lang zh")
+        if no_open:
+            print(f"\n[报告已生成] {allure_report}")
+            print(f"  查看报告: allure open {allure_report}\n")
+        else:
+            _kill_allure_serve()
+            subprocess.Popen(
+                ["allure", "open", allure_report],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
     else:
-        # 先关闭上一次残留的 allure open 进程，再启动新的
-        _kill_allure_serve()
-        subprocess.Popen(
-            ["allure", "open", allure_report],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
+        print(f"\n[提示] Allure CLI 安装失败，跳过报告生成。")
+        print(f"  报告数据已保存: {allure_result}")
+        print(f"  请手动安装: macOS 执行 brew install allure，或访问 https://github.com/allure-framework/allure2/releases\n")
 
     sys.exit(exit_code)
 

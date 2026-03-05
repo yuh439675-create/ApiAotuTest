@@ -1,2 +1,0 @@
-[32mINFO    [0m test:conftest.py:89 >> 开始: Test_Case/test_login.py::TestLogin::test_login_success
-[32mINFO    [0m test:conftest.py:94 << 结束: Test_Case/test_login.py::TestLogin::test_login_success  用例耗时: 3ms

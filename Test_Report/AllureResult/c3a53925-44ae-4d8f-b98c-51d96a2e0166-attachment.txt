@@ -1,2 +1,0 @@
-[32mINFO    [0m test:conftest.py:89 >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-缺少参数]
-[32mINFO    [0m test:conftest.py:94 << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[查询接口-缺少参数]  用例耗时: 5ms
