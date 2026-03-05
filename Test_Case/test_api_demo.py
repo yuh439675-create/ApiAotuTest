@@ -39,7 +39,4 @@ class TestApiDataDriven:
             resp = http.post(path, json=body)
         else:
             pytest.skip(f"暂不支持 {method} 方法")
-
-        assert_response(resp) \
-            .status_is(case["expect_status"]) \
-            .log_result(case["case_name"])
+        assert case.get('msg') == resp.json().get('msg')

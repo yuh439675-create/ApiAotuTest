@@ -3,6 +3,7 @@ import re
 import json
 import time
 import logging
+from typing import Callable
 import pytest
 import allure
 from Common.login import login
@@ -99,10 +100,10 @@ def token():
 
 
 @pytest.fixture(scope="session")
-def api(token):
+def api(token) -> Callable[[str], AuthClient]:
     _clients = {}
 
-    def _api(user):
+    def _api(user) -> AuthClient:
         if user not in _clients:
             t = token(user)
             _clients[user] = AuthClient(token=t)
@@ -112,7 +113,7 @@ def api(token):
 
 
 @pytest.fixture(scope="session")
-def http():
+def http() -> Requests:
     return Requests()
 
 

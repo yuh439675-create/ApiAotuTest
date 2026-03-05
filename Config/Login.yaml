@@ -1,7 +1,7 @@
 # key可以照着这个来，value都是假的(*^▽^*)，根据自己项目来
 # 内容暂时这么多，格式需要固定这个，方便后面读取，具体怎么用下面会讲到
 # 复制此文件为 Login.yaml 并填入真实配置
-url: 'https://h5.lollipop.im/'
+url: 'https://www.testshort.top/'
 
 # 登录接口配置（可自由调整）
 login:
@@ -10,12 +10,12 @@ login:
 
 user:
   yhb:
-    username: yuh439675@gmail.com
+    username: 1@qq.com
     password: 123456
 
 mysql:
-  db: your_db
-  host: 127.0.0.1
-  password: 'your_password'
+  db: duanju
+  host: 69.5.12.246
+  password: 'V567wgAvpdrWc4Dat24M'
   port: 3306
-  user: root
+  user: www

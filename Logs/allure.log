@@ -1,0 +1,21 @@
+2026-03-05 16:34:24 | INFO    | test:128 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-正常请求]
+2026-03-05 16:34:24 | DEBUG   | urllib3.connectionpool:1049 | Starting new HTTPS connection (1): www.testshort.top:443
+2026-03-05 16:34:25 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
+2026-03-05 16:34:25 | INFO    | test:133 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-正常请求]  用例耗时: 1.2秒
+2026-03-05 16:34:25 | INFO    | test:128 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-缺少密码参数]
+2026-03-05 16:34:26 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
+2026-03-05 16:34:26 | INFO    | test:133 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-缺少密码参数]  用例耗时: 0.5秒
+2026-03-05 16:34:26 | INFO    | test:128 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-账号为空]
+2026-03-05 16:34:26 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
+2026-03-05 16:34:26 | INFO    | test:133 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-账号为空]  用例耗时: 0.5秒
+2026-03-05 16:34:26 | INFO    | test:128 | >> 开始: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-密码为空]
+2026-03-05 16:34:27 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "POST /sqx_fast/app/Login/emailLogin HTTP/1.1" 200 None
+2026-03-05 16:34:27 | INFO    | test:133 | << 结束: Test_Case/test_api_demo.py::TestApiDataDriven::test_api_with_data[登录接口-密码为空]  用例耗时: 0.6秒
+2026-03-05 16:34:27 | INFO    | test:146 | 
+===============================================================================================
+  接口性能统计  |  总请求: 4  |  总耗时: 2.8秒
+===============================================================================================
+接口                                                    次数        P50        P90        P99        Max
+-----------------------------------------------------------------------------------------------
+POST https://www.testshort.top/sqx_fast/app/Log...     4       0.5秒       1.2秒       1.2秒       1.2秒
+===============================================================================================

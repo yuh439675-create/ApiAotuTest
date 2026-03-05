@@ -57,16 +57,15 @@ class PerfCollector:
 
         total_ms = sum(r[2] for r in records)
         lines = [
-            f"{'序号':<5} {'方法':<7} {'接口URL':<55} {'耗时':>10}",
-            "-" * 80,
+            f"{'序号':<5} {'方法':<7} {'接口URL':<90} {'耗时':>10}",
+            "-" * 120,
         ]
         for i, (method, url, ms) in enumerate(records, 1):
-            display_url = url if len(url) <= 55 else url[:52] + "..."
             tag = " ⚠️慢" if ms > SLOW_THRESHOLD_MS else ""
-            lines.append(f"{i:<5} {method:<7} {display_url:<55} {format_duration(ms):>10}{tag}")
+            lines.append(f"{i:<5} {method:<7} {url:<90} {format_duration(ms):>10}{tag}")
 
-        lines.append("-" * 80)
-        lines.append(f"{'合计':<5} {'':<7} {f'共 {len(records)} 个请求':<55} {format_duration(total_ms):>10}")
+        lines.append("-" * 120)
+        lines.append(f"{'合计':<5} {'':<7} {f'共 {len(records)} 个请求':<90} {format_duration(total_ms):>10}")
         return "\n".join(lines)
 
     # ── 全局统计 ──
@@ -81,13 +80,14 @@ class PerfCollector:
         total_requests = sum(len(v) for v in data.values())
         total_time = sum(sum(v) for v in data.values())
 
+        sep_len = 120
         lines = [
             "",
-            "=" * 95,
+            "=" * sep_len,
             f"  接口性能统计  |  总请求: {total_requests}  |  总耗时: {format_duration(total_time)}",
-            "=" * 95,
-            f"{'接口':<50} {'次数':>5} {'P50':>10} {'P90':>10} {'P99':>10} {'Max':>10}",
-            "-" * 95,
+            "=" * sep_len,
+            f"{'接口':<90} {'次数':>5} {'P50':>10} {'P90':>10} {'P99':>10} {'Max':>10}",
+            "-" * sep_len,
         ]
 
         for key, times in sorted(data.items(), key=lambda x: max(x[1]), reverse=True):
@@ -96,12 +96,11 @@ class PerfCollector:
             p90 = _percentile(times, 90)
             p99 = _percentile(times, 99)
             mx = max(times)
-            dk = key if len(key) <= 50 else key[:47] + "..."
             lines.append(
-                f"{dk:<50} {n:>5} {format_duration(p50):>10} {format_duration(p90):>10} {format_duration(p99):>10} {format_duration(mx):>10}"
+                f"{key:<90} {n:>5} {format_duration(p50):>10} {format_duration(p90):>10} {format_duration(p99):>10} {format_duration(mx):>10}"
             )
 
-        lines.append("=" * 95)
+        lines.append("=" * sep_len)
         return "\n".join(lines)
 
     def allure_global_report(self):

@@ -8,6 +8,7 @@
   username: 1@qq.com
   password: 123456
   expect_status: 200
+  msg: success
 
 - case_name: "登录接口-缺少密码参数"
   method: POST
@@ -15,6 +16,7 @@
   content-type: application/json
   username: 1@qq.com
   expect_status: 200
+  msg: Incorrect account or password
 
 - case_name: "登录接口-账号为空"
   method: POST
@@ -23,6 +25,7 @@
   username:
   password: 123456
   expect_status: 200
+  msg: Account does not exist
 
 - case_name: "登录接口-密码为空"
   method: POST
@@ -31,3 +34,4 @@
   username: 1@qq.com
   password:
   expect_status: 200
+  msg: Incorrect account or password1

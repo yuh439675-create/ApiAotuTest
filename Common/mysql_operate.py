@@ -24,17 +24,20 @@ class ConnectionPool:
         self._lock = threading.Lock()
 
     def _create_conn(self):
-        return pymysql.connect(
-            host=self._config["host"],
-            user=self._config["user"],
-            password=self._config["password"],
-            db=self._config["db"],
-            port=self._config["port"],
-            charset=self._config.get("charset", "utf8mb4"),
-            autocommit=True,
-            connect_timeout=5,
-            read_timeout=30,
-        )
+        kwargs = {
+            "host": self._config["host"],
+            "user": self._config["user"],
+            "password": self._config["password"],
+            "port": self._config.get("port", 3306),
+            "charset": self._config.get("charset", "utf8mb4"),
+            "autocommit": True,
+            "connect_timeout": 5,
+            "read_timeout": 30,
+        }
+        # db 可选：不配或注释掉时，先连上再查 SHOW DATABASES 选库
+        if self._config.get("db"):
+            kwargs["db"] = self._config["db"]
+        return pymysql.connect(**kwargs)
 
     def acquire(self):
         # 1. 优先从空闲池取
@@ -161,4 +164,6 @@ class MysqlOperate:
 
 if __name__ == "__main__":
     db = MysqlOperate()
-    print(db.query("SHOW TABLES"))
+    # 未配置 db 时用 SHOW DATABASES 查库；配置了 db 后用 SHOW TABLES 查表
+    print(db.query("SHOW DATABASES"))
+    print(db.query('show tables'))

@@ -21,13 +21,15 @@ from Config.config import Config
 
 
 def _check_plugin(module_name, pip_name):
+    """检查插件是否已安装。用 find_spec 避免 import，防止 pytest 报 PytestAssertRewriteWarning。"""
     try:
-        importlib.import_module(module_name)
-        return True
-    except ImportError:
-        print(f"\n[错误] 缺少依赖: {pip_name}")
-        print(f"  请执行: pip install {pip_name}\n")
-        return False
+        spec = importlib.util.find_spec(module_name)
+        return spec is not None
+    except (ImportError, ValueError, ModuleNotFoundError):
+        pass
+    print(f"\n[错误] 缺少依赖: {pip_name}")
+    print(f"  请执行: pip install {pip_name}\n")
+    return False
 
 
 def clean_screenshots():
