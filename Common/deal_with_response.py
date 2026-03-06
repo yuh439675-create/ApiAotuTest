@@ -26,33 +26,37 @@ def _is_allure_active():
     return _ALLURE_ACTIVE
 
 
-# ANSI 颜色：200 天空蓝，非 200 橙色
-_COLOR_SKY_BLUE = "\033[96m"   # 天空蓝/亮青
-_COLOR_ORANGE = "\033[38;5;208m"  # 橙色 (256色)
+# ANSI 颜色（五颜六色）
 _COLOR_RESET = "\033[0m"
+_C = {
+    "sep": "\033[97m",      # 白色分隔线
+    "url": "\033[96m",      # 亮青 - 请求URL
+    "method": "\033[92m",   # 亮绿 - 请求方法
+    "headers": "\033[93m",  # 亮黄 - Headers
+    "params": "\033[94m",   # 亮蓝 - 入参
+    "status_ok": "\033[96m",   # 亮青 - 状态码 200
+    "status_err": "\033[38;5;208m",  # 橙色 - 状态码非 200
+    "time": "\033[95m",     # 亮紫 - 响应时间
+    "body": "\033[33m",     # 黄色 - 响应报文
+}
 
 
 def _log_to_console(request_url, request_method, request_headers, data, status_code, response_time, body):
-    """控制台输出请求/响应信息，格式与报告一致；状态码 200 天空蓝，非 200 橙色"""
-    sep = "-" * 80
-    status_line = f"状态码: {status_code}"
-    if status_code == 200:
-        status_line = f"{_COLOR_SKY_BLUE}{status_line}{_COLOR_RESET}"
-    else:
-        status_line = f"{_COLOR_ORANGE}{status_line}{_COLOR_RESET}"
+    """控制台输出请求/响应信息，每行不同颜色（五颜六色）"""
+    sep = f"{_C['sep']}{'-' * 80}{_COLOR_RESET}"
+    sc = _C["status_ok"] if status_code == 200 else _C["status_err"]
     lines = [
         sep,
-        f"请求的URL: {request_url}",
-        f"请求的方法: {request_method}",
-        f"请求的Headers: {request_headers or {}}",
-        f"入参报文: {data or ''}",
-        sep,
-        status_line,
-        f"响应时间: {response_time}",
-        f"响应报文:\n{body}",
+        f"{_C['url']}请求的URL: {request_url}{_COLOR_RESET}",
+        f"{_C['method']}请求的方法: {request_method}{_COLOR_RESET}",
+        f"{_C['headers']}请求的Headers: {request_headers or {}}{_COLOR_RESET}",
+        f"{_C['params']}入参报文: {data or ''}{_COLOR_RESET}",
+        f"{sc}状态码: {status_code}{_COLOR_RESET}",
+        f"{_C['time']}响应时间: {response_time}{_COLOR_RESET}",
+        f"{_C['body']}响应报文:\n{body}{_COLOR_RESET}",
         sep,
     ]
-    log.info("\n" + "\n".join(lines))
+    log.info("\n\n\n" + "\n".join(lines))
 
 
 def deal_with_res(data, res, request_url, request_method, request_headers, response_time):

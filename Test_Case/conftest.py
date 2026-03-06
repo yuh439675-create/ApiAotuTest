@@ -1,4 +1,8 @@
 import os
+
+# 启用终端颜色（PyCharm / Runner 下 live log setup/teardown 金黄色）
+os.environ.setdefault("PY_COLORS", "1")
+
 import re
 import json
 import time
@@ -38,6 +42,36 @@ def _get_nested_value(data, field_path):
 def _decode_unicode(s):
     """将字符串中的 \\uXXXX 转义还原为中文"""
     return re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), s)
+
+
+def pytest_configure(config):
+    """live log setup/teardown 改为金黄色"""
+    try:
+        import _pytest.logging as _logging
+        _orig_emit = _logging._LiveLoggingStreamHandler.emit
+
+        def _emit_golden(self, record):
+            from contextlib import nullcontext
+            ctx = (
+                self.capture_manager.global_and_fixture_disabled()
+                if self.capture_manager else nullcontext()
+            )
+            with ctx:
+                if not self._first_record_emitted:
+                    self.stream.write("\n")
+                    self._first_record_emitted = True
+                elif self._when in ("teardown", "finish"):
+                    if not self._test_outcome_written:
+                        self._test_outcome_written = True
+                        self.stream.write("\n")
+                if not self._section_name_shown and self._when:
+                    self.stream.section("live log " + self._when, sep="-", bold=True, yellow=True)
+                    self._section_name_shown = True
+                super(_logging._LiveLoggingStreamHandler, self).emit(record)
+
+        _logging._LiveLoggingStreamHandler.emit = _emit_golden
+    except Exception:
+        pass
 
 
 def pytest_collection_modifyitems(items):

@@ -12,6 +12,9 @@
 import os
 import sys
 import glob
+
+# 启用终端颜色（live log setup/teardown 金黄色等）
+os.environ.setdefault("PY_COLORS", "1")
 import signal
 import subprocess
 import importlib
