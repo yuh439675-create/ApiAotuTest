@@ -106,8 +106,10 @@ class Requests:
 
 
 class AuthClient(Requests):
-    def __init__(self, token, timeout=30, extra_headers=None):
+    def __init__(self, token, timeout=30, extra_headers=None, base_url=None):
         super().__init__(timeout=timeout)
+        if base_url is not None:
+            self.base_url = base_url.rstrip("/") + "/"
         self._auth_headers = {
             "token": token,
             "Content-Type": "application/json",

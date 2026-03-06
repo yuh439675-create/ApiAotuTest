@@ -52,15 +52,36 @@ class GetConfig:
         """
         返回用户完整配置，支持自由扩展字段。
         必填: username, password
-        可选: code, captcha 或任意其他字段，按需配置即可
+        可选: path, token_field, code, captcha 或任意其他字段
         """
         try:
             return dict(self.env["user"][user])
         except KeyError:
             raise KeyError(f"配置文件中未找到用户 '{user}' 的信息")
 
+    def get_user_login_config(self, user):
+        """
+        获取指定用户的登录配置（path、token_field）。
+        用户下可单独配置 path、token_field，未配置时回退到 login 段。
+        """
+        u = self.get_user_config(user)
+        login_cfg = self.env.get("login", {})
+        return {
+            "path": u.get("path") or login_cfg.get("path", "sqx_fast/app/Login/emailLogin"),
+            "token_field": u.get("token_field") or login_cfg.get("token_field", "data.token"),
+        }
+
     def get_url(self):
         return self.env.get("url", "")
+
+    def get_user_base_url(self, user):
+        """
+        获取指定用户的请求 base_url。
+        用户下可配置 url 或 base_url，未配置时使用全局 url。
+        用于后管等需不同域名的场景。
+        """
+        u = self.get_user_config(user)
+        return u.get("url") or u.get("base_url") or self.get_url()
 
     def get_mysql_config(self):
         try:

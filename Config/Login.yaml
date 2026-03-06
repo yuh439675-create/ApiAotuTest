@@ -8,10 +8,25 @@ login:
   path: "sqx_fast/app/Login/emailLogin"    # 登录接口路径
   token_field: "token"                      # token 在响应中的字段路径（顶层）
 
+# user：新增身份时同样，username_key/username、password、业务字段会拼成登录请求体
 user:
   yhb:
-    username: 1@qq.com
+    path: "sqx_fast/app/Login/emailLogin"    # 客户端登录接口路径
+    token_field: "token"
+    emailName: 1@qq.com
     password: 123456
+    isFirebaseEmail: 0
+
+  admin:
+    url: "https://admin.testshort.top"   # 后管接口域名，与登录同域 token 才有效
+    path: "https://admin.testshort.top/sqx_fast/sys/login"
+    token_field: "token"
+    # 以下 4 项会拼成登录请求体，username_key 决定「用户名字段名」
+    username_key: "username"   # 后管用 username，客户端用 emailName
+    username: admin03             # → 请求体 {"username": "lucas", ...}
+    password: 123456            # → 请求体 {"password": "123456", ...}
+    adminType: 1                 # → 请求体 {"adminType": 1, ...}
+    # captcha/uuid 由 dynamic_login 动态获取，会合并进请求体
 
 mysql:
   db: duanju

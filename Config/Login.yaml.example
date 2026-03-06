@@ -1,26 +1,33 @@
 # 复制此文件为 Login.yaml 并填入真实配置
 url: 'https://your-domain.com/api/'
 
-# 登录接口配置（按实际接口调整）
+# 登录接口默认配置（用户未单独配置时使用）
 login:
-  path: "sqx_fast/app/Login/emailLogin"    # 登录接口路径
-  token_field: "data.token"                 # token 在响应中的字段路径
-  # 常见格式示例:
-  #   data.token         -> {"data": {"token": "xxx"}}
-  #   data.loginCode     -> {"data": {"loginCode": "xxx"}}
-  #   token              -> {"token": "xxx"}
-  #   result.accessToken -> {"result": {"accessToken": "xxx"}}
+  path: "sqx_fast/app/Login/emailLogin"
+  token_field: "data.token"
 
-# user 配置说明：必填 username、password，其余按需自由添加
+# user 配置：必填 username、password
+# 支持用户级 path、token_field（客户端/后管等不同登录接口）
+# 新增身份时同样：username_key/username、password、以及任意业务字段会拼成请求体
 user:
   yhb:
+    path: "sqx_fast/app/Login/emailLogin"    # 客户端登录
+    token_field: "token"
     username: your_username
     password: your_password
-    # 以下为可选，按项目需要配置：
-    # code: 666666        # 验证码，会映射为请求体的 captcha
-    # captcha: xxx        # 或直接写 captcha 字段
-    # email: xxx@xx.com   # 邮箱登录时可加
-    # 任意其他字段都会合并到登录请求体中
+
+  admin:
+    url: "https://admin.your-domain.com"     # 后管接口域名，与登录同域 token 才有效
+    path: "sqx_fast/sys/login"               # 后管登录（可与客户端不同）
+    token_field: "token"
+    # 以下会拼成登录请求体，username_key 决定用户名字段名
+    username_key: "username"                  # 后管用 username，客户端用 emailName
+    password_key: "password"                  # 密码字段名，默认 password
+    username: admin_user                     # → 请求体 {"username": "admin_user", ...}
+    password: admin_pass                     # → 请求体 {"password": "admin_pass", ...}
+    adminType: 1                             # → 请求体 {"adminType": 1, ...}
+    captcha: "6abxa"                         # 静态验证码（或由 dynamic_login 动态获取）
+    uuid: "0681c6cb-c14c-4967-8d0f-37d90dcaa3ce"
 
 mysql:
   db: your_db

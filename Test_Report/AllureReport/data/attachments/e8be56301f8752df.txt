@@ -1,0 +1,1 @@
+{'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3NzcxMzAsImV4cCI6MTc3MzM4MTkzMH0.LEe1ZKNblTMDn36jQ7IfxjL_3J-QaTnRanvooQUzt3_slF9Fd1FUy8Msb-2S7OA7jwM_TXMAFZDo2DyVFflOVg', 'Content-Type': 'application/json'}

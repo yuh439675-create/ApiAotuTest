@@ -8,21 +8,29 @@
   python Runner.py Test_Case/test_scenario_demo.py
   python Runner.py -k scenario   # 只跑场景用例
 """
-import pytest
+import os
+
 import allure
+import pytest
+
 from Common.assertions import assert_response
 from Common.mysql_operate import MysqlOperate
+from Config.config import Config
+from Utils.Read_yaml_json import YamlReader
+
 db = MysqlOperate()
 # 之后所有操作都用 db 调用
+
+CASES = YamlReader(os.path.join(Config.Datas_path, "后管币种网络配置","test_lol_settings.yaml")).read()
 
 
 # 把需要登录后的接口路径集中配置，便于维护（也可放到 Config/xxx.yaml）
 class ScenarioPaths:
     """场景中用到的接口路径（请按项目实际修改）"""
     # 示例：登录后拉取用户/业务数据
-    USER_OR_INFO = "sqx_fast/app/user/selectUserById"   # 替换为真实「获取用户信息」等接口
+    USER_OR_INFO = "sqx_fast/app/user/selectUserById"  # 替换为真实「获取用户信息」等接口
     # 若有「依赖上一步结果」的接口，例如用token查询剩下的lol数量
-    ORDER_LIST = "sqx_fast/app/cash/getCryptoBalance"      # 替换为真实接口
+    ORDER_LIST = "sqx_fast/app/cash/getCryptoBalance"  # 替换为真实接口
     # 调用提现接口
     creditsExchangeToLolWithdraw = 'sqx_fast/app/integral/creditsExchangeToLolWithdraw'
 
@@ -40,52 +48,59 @@ class TestScenarioDemo:
             client = api("yhb")
             assert client._auth_headers.get("token"), "应有 token"
 
-        with allure.step("2. 用 token 请求需认证接口"):
-            resp = client.get(ScenarioPaths.USER_OR_INFO)
-            assert resp.status_code != 500, f"服务异常: {resp.text[:200]}"
-            if resp.status_code == 200:
-                assert_response(resp).status_ok()
-            else:
-                pytest.skip(f"当前接口返回 {resp.status_code}，请将 ScenarioPaths 改为真实路径后再跑")
+        with allure.step("2. 获取已登录后管（内部会登录或读缓存）"):
+            client = api("admin")
+            assert client._auth_headers.get("token"), "应有 token"
 
     @allure.story("登录后连续调用多个需认证接口")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.title("场景：登录 → 获取用户信息 → 依赖结果调用下一接口")
-    def test_login_then_chain_apis(self, http, api):
+    @pytest.mark.parametrize("case", CASES, ids=[c["case_name"] for c in CASES])
+    def test_login_then_chain_apis(self, http, api, case):
         """
         典型场景：先拿到已登录客户端，再依次调用多个依赖 token 的接口，
         中间结果（如 user_id）传给后续请求。
         """
-        client = api("yhb")
-        # ---------- 步骤 1：调用需要登录的接口 A ----------
-        with allure.step("1. 调用需认证接口（如获取用户信息）"):
-            resp1 = client.get(ScenarioPaths.USER_OR_INFO)
+        yhb_token = api("yhb")
+        admin_token = api("admin")
+
+        #---------------- 币种配置的修改 -------------------
+        with allure.step(": 调用需认证接口（如获取用户信息）"):
+            method = case["method"].upper()
+            if method == "POST":
+                resp = admin_token.post(case['path'], json={
+                    "id": 2,
+                    "currencyId": 2,
+                    "tokenId": case['tokenId'],
+                    "withdrawFeeRate": case['withdrawFeeRate'],
+                    "minWithdraw": case['minWithdraw'],
+                })
+                assert_response(resp).status_ok()
+                assert resp.json().get('code') == 0
+            else:
+                pytest.skip(f"暂不支持 {method} 方法")
+
+        # ---------------- 币种配置的修改 -------------------
+        with allure.step(": 调用需认证接口（如获取用户信息）"):
+            resp1 = yhb_token.get(ScenarioPaths.USER_OR_INFO)
             assert_response(resp1).status_ok()
             body1 = resp1.json()
             self.user_id = body1.get('data')['userId']
             assert resp1.json().get('code') == 0
 
-        # ---------- 步骤 2：用上一步结果调用接口 ----------
-        with allure.step("2. 用上一步结果调用下一接口（如订单列表）"):
-            resp2 = client.get(ScenarioPaths.ORDER_LIST)
+        with allure.step(": 用上一步结果调用下一接口（如订单列表）"):
+            resp2 = yhb_token.get(ScenarioPaths.ORDER_LIST)
             assert_response(resp2).status_ok()
             assert resp2.json().get('code') == 0
 
-
-
-        # ---------- 步骤 3：提现接口 ----------
-        with allure.step("3. 提现接口"):
-            resp3 = client.post(ScenarioPaths.creditsExchangeToLolWithdraw, json={
+        with allure.step(": 提现接口"):
+            resp3 = yhb_token.post(ScenarioPaths.creditsExchangeToLolWithdraw, json={
                 'address': "0xb738c553a56576a085aa9e33d827dc4b78310521",
                 'chainId': '66',
                 'integral': 2000
             })
             assert_response(resp3).status_ok()
             assert resp3.json().get('code') == 0
-
-
-
-
 
 #     @allure.story("纯流程串联")
 #     @allure.severity(allure.severity_level.NORMAL)
