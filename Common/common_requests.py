@@ -3,7 +3,9 @@
 - 全局共享 Session（TCP 连接复用）
 - 每个请求自动包裹 allure.step —— 报告里直接显示每个请求的耗时
 - 用户级 AuthClient 隔离 headers
+- AuthClient 支持 token 失效自动重新登录并重试
 """
+import logging
 import time
 import threading
 import allure
@@ -105,11 +107,17 @@ class Requests:
     post_request = post
 
 
+_auth_logger = logging.getLogger("auth")
+
+
 class AuthClient(Requests):
-    def __init__(self, token, timeout=30, extra_headers=None, base_url=None):
+    def __init__(self, token, timeout=30, extra_headers=None, base_url=None,
+                 user=None, refresh_token=None):
         super().__init__(timeout=timeout)
         if base_url is not None:
             self.base_url = base_url.rstrip("/") + "/"
+        self._user = user
+        self._refresh_token = refresh_token
         self._auth_headers = {
             "token": token,
             "Content-Type": "application/json",
@@ -117,9 +125,50 @@ class AuthClient(Requests):
         if extra_headers:
             self._auth_headers.update(extra_headers)
 
-    def _send(self, method, path, **kwargs):
+    @staticmethod
+    def _is_token_expired(resp):
+        """判断响应是否为 token 失效：code==401 且 msg 中包含 'token'"""
+        try:
+            body = resp.json()
+            code = body.get("code")
+            msg = str(body.get("msg", ""))
+            return code == 401 and "token" in msg.lower()
+        except Exception:
+            return False
+
+    def _merge_headers(self, extra_headers=None):
         merged = dict(self._auth_headers)
-        if kwargs.get("headers"):
-            merged.update(kwargs["headers"])
-        kwargs["headers"] = merged
-        return super()._send(method, path, **kwargs)
+        if extra_headers:
+            merged.update(extra_headers)
+        return merged
+
+    def _send(self, method, path, **kwargs):
+        user_headers = kwargs.pop("headers", None)
+        kwargs["headers"] = self._merge_headers(user_headers)
+        resp = super()._send(method, path, **kwargs)
+
+        if self._is_token_expired(resp) and self._refresh_token:
+            _auth_logger.warning(
+                "[token 失效] %s %s → 自动重新登录 (user=%s)",
+                method, path, self._user,
+            )
+            try:
+                self._refresh_token()
+            except Exception as e:
+                _auth_logger.error("[token 刷新失败] user=%s, 错误: %s", self._user, e)
+                return resp
+
+            _auth_logger.info(
+                "[token 已刷新] 正在重试请求: %s %s (user=%s)",
+                method, path, self._user,
+            )
+            kwargs["headers"] = self._merge_headers(user_headers)
+            resp = super()._send(method, path, **kwargs)
+            _auth_logger.info(
+                "[重试完成] %s %s → code=%s (user=%s)",
+                method, path,
+                resp.json().get("code") if resp else "N/A",
+                self._user,
+            )
+
+        return resp

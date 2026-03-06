@@ -89,19 +89,8 @@ def setup_dirs():
 def token():
     _cache = {}
 
-    def _get_token(user):
-        if user in _cache:
-            return _cache[user]
-
-        token_path = os.path.join(Config.Token_dir, f"{user}_token.json")
-
-        if os.path.exists(token_path):
-            with open(token_path, "r") as f:
-                data = json.load(f)
-            if time.time() - data.get("timestamp", 0) < TOKEN_EXPIRE_SECONDS:
-                _cache[user] = data["token"]
-                return _cache[user]
-
+    def _do_login(user):
+        """执行登录并缓存 token，返回新 token"""
         resp = login(user)
         try:
             resp_json = resp.json()
@@ -109,7 +98,6 @@ def token():
             logger.error("登录响应非 JSON，状态码: %s, 响应体: %s", resp.status_code, resp.text[:500] if resp.text else "(空)")
             raise ValueError(f"登录响应解析失败: {e}\n状态码: {resp.status_code}\n响应体: {resp.text[:500]}") from e
 
-        # 从配置读取 token 字段路径（支持用户级 path/token_field）
         token_field = GetConfig().get_user_login_config(user)["token_field"]
         new_token = _get_nested_value(resp_json, token_field)
 
@@ -124,12 +112,38 @@ def token():
             print("\n" + "=" * 60 + "\n[登录失败] " + err_msg + "\n" + "=" * 60)
             raise ValueError(err_msg)
 
+        token_path = os.path.join(Config.Token_dir, f"{user}_token.json")
         with open(token_path, "w") as f:
             json.dump({"token": new_token, "timestamp": time.time()}, f)
 
         _cache[user] = new_token
         return new_token
 
+    def _get_token(user):
+        if user in _cache:
+            return _cache[user]
+
+        token_path = os.path.join(Config.Token_dir, f"{user}_token.json")
+
+        if os.path.exists(token_path):
+            with open(token_path, "r") as f:
+                data = json.load(f)
+            if time.time() - data.get("timestamp", 0) < TOKEN_EXPIRE_SECONDS:
+                _cache[user] = data["token"]
+                return _cache[user]
+
+        return _do_login(user)
+
+    def _refresh_token(user):
+        """强制重新登录，清除缓存并返回新 token"""
+        _cache.pop(user, None)
+        token_path = os.path.join(Config.Token_dir, f"{user}_token.json")
+        if os.path.exists(token_path):
+            os.remove(token_path)
+        logger.info(f"[token 刷新] 正在为 {user} 重新登录...")
+        return _do_login(user)
+
+    _get_token.refresh = _refresh_token
     return _get_token
 
 
@@ -137,11 +151,21 @@ def token():
 def api(token) -> Callable[[str], AuthClient]:
     _clients = {}
 
+    def _refresh_for_user(user):
+        """401 时调用：重新登录 → 更新 AuthClient 的 token"""
+        new_token = token.refresh(user)
+        if user in _clients:
+            _clients[user]._auth_headers["token"] = new_token
+        return new_token
+
     def _api(user) -> AuthClient:
         if user not in _clients:
             t = token(user)
             base_url = GetConfig().get_user_base_url(user)
-            _clients[user] = AuthClient(token=t, base_url=base_url)
+            _clients[user] = AuthClient(
+                token=t, base_url=base_url, user=user,
+                refresh_token=lambda u=user: _refresh_for_user(u),
+            )
         return _clients[user]
 
     return _api
