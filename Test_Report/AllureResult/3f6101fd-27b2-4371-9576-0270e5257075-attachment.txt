@@ -1,4 +1,0 @@
-[32mINFO    [0m test:conftest.py:159 >> 开始: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_and_use_token
-[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): www.testshort.top:443
-[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://www.testshort.top:443 "GET /sqx_fast/app/user/selectUserById HTTP/1.1" 200 None
-[32mINFO    [0m test:conftest.py:164 << 结束: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_and_use_token  用例耗时: 1.4秒

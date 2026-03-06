@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"eb48ef6211a2c8c1dbf2974b247f6ab7","name":"业务流程测试","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
+{"total":1,"items":[{"uid":"eb48ef6211a2c8c1dbf2974b247f6ab7","name":"业务流程测试","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}}]}

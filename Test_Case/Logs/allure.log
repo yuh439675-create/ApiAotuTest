@@ -1,19 +1,19 @@
-2026-03-06 10:21:56 | INFO    | test:163 | >> 开始: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_and_use_token
-2026-03-06 10:21:56 | DEBUG   | urllib3.connectionpool:1049 | Starting new HTTPS connection (1): www.testshort.top:443
-2026-03-06 10:21:57 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "GET /sqx_fast/app/user/selectUserById HTTP/1.1" 200 None
-2026-03-06 10:21:57 | INFO    | test:168 | << 结束: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_and_use_token  用例耗时: 1.5秒
-2026-03-06 10:21:57 | INFO    | test:163 | >> 开始: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_then_chain_apis
-2026-03-06 10:21:58 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "GET /sqx_fast/app/user/selectUserById HTTP/1.1" 200 None
-2026-03-06 10:21:58 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "GET /sqx_fast/app/cash/getCryptoBalance HTTP/1.1" 200 None
-2026-03-06 10:21:59 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "POST /sqx_fast/app/integral/creditsExchangeToLolWithdraw HTTP/1.1" 200 None
-2026-03-06 10:21:59 | INFO    | test:168 | << 结束: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_then_chain_apis  用例耗时: 1.5秒
-2026-03-06 10:21:59 | INFO    | test:181 | 
+2026-03-06 10:34:16 | INFO    | test:163 | >> 开始: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_and_use_token
+2026-03-06 10:34:16 | DEBUG   | urllib3.connectionpool:1049 | Starting new HTTPS connection (1): www.testshort.top:443
+2026-03-06 10:34:18 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "GET /sqx_fast/app/user/selectUserById HTTP/1.1" 200 None
+2026-03-06 10:34:18 | INFO    | test:168 | << 结束: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_and_use_token  用例耗时: 1.4秒
+2026-03-06 10:34:18 | INFO    | test:163 | >> 开始: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_then_chain_apis
+2026-03-06 10:34:18 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "GET /sqx_fast/app/user/selectUserById HTTP/1.1" 200 None
+2026-03-06 10:34:19 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "GET /sqx_fast/app/cash/getCryptoBalance HTTP/1.1" 200 None
+2026-03-06 10:34:19 | DEBUG   | urllib3.connectionpool:544 | https://www.testshort.top:443 "POST /sqx_fast/app/integral/creditsExchangeToLolWithdraw HTTP/1.1" 200 None
+2026-03-06 10:34:19 | INFO    | test:168 | << 结束: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_then_chain_apis  用例耗时: 1.4秒
+2026-03-06 10:34:19 | INFO    | test:181 | 
 ========================================================================================================================
-  接口性能统计  |  总请求: 4  |  总耗时: 2.9秒
+  接口性能统计  |  总请求: 4  |  总耗时: 2.8秒
 ========================================================================================================================
 接口                                                                                            次数        P50        P90        P99        Max
 ------------------------------------------------------------------------------------------------------------------------
-GET https://www.testshort.top/sqx_fast/app/user/selectUserById                                 2       1.0秒       1.5秒       1.5秒       1.5秒
-GET https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance                               1       0.5秒       0.5秒       0.5秒       0.5秒
+GET https://www.testshort.top/sqx_fast/app/user/selectUserById                                 2       0.9秒       1.4秒       1.4秒       1.4秒
 POST https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw              1       0.5秒       0.5秒       0.5秒       0.5秒
+GET https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance                               1       0.4秒       0.4秒       0.4秒       0.4秒
 ========================================================================================================================

@@ -51,7 +51,7 @@ class TestScenarioDemo:
     @allure.story("登录后连续调用多个需认证接口")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.title("场景：登录 → 获取用户信息 → 依赖结果调用下一接口")
-    def test_login_then_chain_apis(self, api):
+    def test_login_then_chain_apis(self, http, api):
         """
         典型场景：先拿到已登录客户端，再依次调用多个依赖 token 的接口，
         中间结果（如 user_id）传给后续请求。
@@ -63,12 +63,14 @@ class TestScenarioDemo:
             assert_response(resp1).status_ok()
             body1 = resp1.json()
             self.user_id = body1.get('data')['userId']
+            assert resp1.json().get('code') == 0
 
         # ---------- 步骤 2：用上一步结果调用接口 ----------
         with allure.step("2. 用上一步结果调用下一接口（如订单列表）"):
             resp2 = client.get(ScenarioPaths.ORDER_LIST)
             assert_response(resp2).status_ok()
-            print(resp2.json())
+            assert resp2.json().get('code') == 0
+
 
 
         # ---------- 步骤 3：提现接口 ----------
@@ -79,7 +81,8 @@ class TestScenarioDemo:
                 'integral': 2000
             })
             assert_response(resp3).status_ok()
-            print(resp3.json())
+            assert resp3.json().get('code') == 0
+
 
 
 
