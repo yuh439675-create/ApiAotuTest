@@ -1,0 +1,4 @@
+2026-03-06 15:52:20 | DEBUG   | urllib3.connectionpool:1049 | Starting new HTTPS connection (1): www.goodshort.com:443
+2026-03-06 15:52:21 | DEBUG   | urllib3.connectionpool:544 | https://www.goodshort.com:443 "POST /hwycreels/book/detail HTTP/1.1" 200 11979
+2026-03-06 15:52:21 | DEBUG   | urllib3.connectionpool:1049 | Starting new HTTPS connection (1): www.goodshort.com:443
+2026-03-06 15:52:21 | DEBUG   | urllib3.connectionpool:544 | https://www.goodshort.com:443 "POST /hwycreels/book/chapter/records HTTP/1.1" 404 138

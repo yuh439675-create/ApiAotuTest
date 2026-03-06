@@ -5,10 +5,28 @@
   method: POST
   path: "sqx_fast/admin/crypto/network/update"
   content-type: application/json
-  id: 5
-  currencyId: 2
   tokenId: "0xc7Ef0284223D188Ccbd71797922946ac0058dFA9"
-  withdrawFeeRate: 0.5
-  'minWithdraw': 100
+  withdrawFeeRate: 0.2
+  'minWithdraw': 10
   code: 0
   msg: success
+
+- case_name: "修改币种配置-正常请求"
+  method: POST
+  path: "sqx_fast/admin/crypto/network/update"
+  content-type: application/json
+  tokenId: "0xc7Ef0284223D188Ccbd71797922946ac0058dFA9"
+  withdrawFeeRate: 0.4
+  'minWithdraw': 100
+  code: 1
+  msg: success1
+
+- case_name: "修改币种配置-正常请求"
+  method: POST
+  path: "sqx_fast/admin/crypto/network/update"
+  content-type: application/json
+  tokenId: "0xc7Ef0284223D188Ccbd71797922946ac0058dFA9"
+  withdrawFeeRate: 0.6
+  'minWithdraw': 1000
+  code: 2
+  msg: success2

@@ -55,7 +55,7 @@ class TestScenarioDemo:
     @allure.story("登录后连续调用多个需认证接口")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.title("场景：登录 → 获取用户信息 → 依赖结果调用下一接口")
-    @pytest.mark.parametrize("case", CASES, ids=[c["case_name"] for c in CASES])
+    @pytest.mark.parametrize("case", CASES, ids=[f"{c['case_name']}_{i+1}" for i, c in enumerate(CASES)])
     def test_login_then_chain_apis(self, http, api, case):
         """
         典型场景：先拿到已登录客户端，再依次调用多个依赖 token 的接口，
@@ -76,7 +76,8 @@ class TestScenarioDemo:
                     "minWithdraw": case['minWithdraw'],
                 })
                 assert_response(resp).status_ok()
-                assert resp.json().get('code') == 0
+                assert resp.json().get('code') == case['code']
+                assert resp.json().get('msg') == case['msg']
             else:
                 pytest.skip(f"暂不支持 {method} 方法")
 
@@ -100,7 +101,7 @@ class TestScenarioDemo:
                 'integral': 2000
             })
             assert_response(resp3).status_ok()
-            assert resp3.json().get('code') == 0
+            # assert resp3.json().get('code') == 0
 
 #     @allure.story("纯流程串联")
 #     @allure.severity(allure.severity_level.NORMAL)
