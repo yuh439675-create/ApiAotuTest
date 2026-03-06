@@ -13,6 +13,17 @@ _ALLURE_ACTIVE = None
 MAX_BODY_LEN = 2048
 
 
+def _format_json_body(body):
+    """将 JSON 字符串格式化为缩进易读形式"""
+    if not body or not body.strip():
+        return body
+    try:
+        parsed = json.loads(body)
+        return json.dumps(parsed, indent=2, ensure_ascii=False)
+    except (ValueError, TypeError):
+        return body
+
+
 def _is_allure_active():
     """检测当前是否在 allure 报告模式运行"""
     global _ALLURE_ACTIVE
@@ -70,6 +81,8 @@ def deal_with_res(data, res, request_url, request_method, request_headers, respo
             body = res.data.decode("utf-8") if isinstance(res.data, bytes) else str(res.data)
         else:
             body = ""
+
+        body = _format_json_body(body)
 
         if len(body) > MAX_BODY_LEN:
             body = body[:MAX_BODY_LEN] + f"\n... (截断，原始 {len(body)} 字符)"

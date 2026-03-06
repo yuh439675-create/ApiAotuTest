@@ -69,7 +69,7 @@ class TestScenarioDemo:
             method = case["method"].upper()
             if method == "POST":
                 resp = admin_token.post(case['path'], json={
-                    "id": 2,
+                    "id": 5,
                     "currencyId": 2,
                     "tokenId": case['tokenId'],
                     "withdrawFeeRate": case['withdrawFeeRate'],

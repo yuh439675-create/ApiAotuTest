@@ -3147,3 +3147,1032 @@
 [33m响应报文:
 {"msg":"success","code":0}[0m
 [97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:11 | INFO    | api_test:59 | 
+2026-03-06 16:20:11 | INFO    | api_test:60 | 
+2026-03-06 16:20:11 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 2, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.2, 'minWithdraw': 10}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.6秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:11 | INFO    | api_test:59 | 
+2026-03-06 16:20:11 | INFO    | api_test:60 | 
+2026-03-06 16:20:11 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.6秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 16:20:12","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:12 | INFO    | api_test:59 | 
+2026-03-06 16:20:12 | INFO    | api_test:60 | 
+2026-03-06 16:20:12 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:12 | INFO    | api_test:59 | 
+2026-03-06 16:20:12 | INFO    | api_test:60 | 
+2026-03-06 16:20:12 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:12 | INFO    | api_test:59 | 
+2026-03-06 16:20:12 | INFO    | api_test:60 | 
+2026-03-06 16:20:12 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 2, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.4, 'minWithdraw': 100}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:12 | INFO    | api_test:59 | 
+2026-03-06 16:20:12 | INFO    | api_test:60 | 
+2026-03-06 16:20:12 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 16:20:13","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:13 | INFO    | api_test:59 | 
+2026-03-06 16:20:13 | INFO    | api_test:60 | 
+2026-03-06 16:20:13 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:13 | INFO    | api_test:59 | 
+2026-03-06 16:20:13 | INFO    | api_test:60 | 
+2026-03-06 16:20:13 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:13 | INFO    | api_test:59 | 
+2026-03-06 16:20:13 | INFO    | api_test:60 | 
+2026-03-06 16:20:13 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 2, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.6, 'minWithdraw': 1000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:13 | INFO    | api_test:59 | 
+2026-03-06 16:20:13 | INFO    | api_test:60 | 
+2026-03-06 16:20:13 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 16:20:14","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:14 | INFO    | api_test:59 | 
+2026-03-06 16:20:14 | INFO    | api_test:60 | 
+2026-03-06 16:20:14 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:20:14 | INFO    | api_test:59 | 
+2026-03-06 16:20:14 | INFO    | api_test:60 | 
+2026-03-06 16:20:14 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:41 | INFO    | api_test:59 | 
+2026-03-06 16:28:41 | INFO    | api_test:60 | 
+2026-03-06 16:28:41 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.2, 'minWithdraw': 10}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.6秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:41 | INFO    | api_test:59 | 
+2026-03-06 16:28:41 | INFO    | api_test:60 | 
+2026-03-06 16:28:41 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.6秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 16:28:42","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:41 | INFO    | api_test:59 | 
+2026-03-06 16:28:41 | INFO    | api_test:60 | 
+2026-03-06 16:28:41 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:42 | INFO    | api_test:59 | 
+2026-03-06 16:28:42 | INFO    | api_test:60 | 
+2026-03-06 16:28:42 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 1.1秒[0m
+[33m响应报文:
+{"msg":"success","lolAmount":10.00000000,"code":0,"data":{"id":162,"userId":181615,"userName":null,"userType":1,"currency":"LOL","amount":10.00000000,"deductedAmount":10.00000000,"fee":0.02000000,"actualAmount":9.98000000,"chainId":"66","chainName":"BASE","walletAddress":"0xb738c553a56576a085aa9e33d827dc4b78310521","txHash":null,"blockHeight":null,"blockTime":null,"confirmations":0,"platform":"nexa","platformOrderId":"2029836562780819457","thirdPartyId":"WD1772785723663181615","ipAddress":"138.19.255.162","deviceInfo":"python-requests/2.32.5","riskLevel":0,"riskReason":null,"auditType":"auto","auditorId":null,"auditorName":null,"auditTime":null,"auditResult":null,"auditRemark":null,"retryCount":0,"failReason":null,"isRefunded":0,"refundTime":null,"status":1,"createTime":"2026-03-06 16:28:43","processTime":"2026-03-06 16:28:43","completeTime":null,"updateTime":"2026-03-06 16:28:43","remark":"","callbackData":null,"extraData":"{\"lolAmount\":10.00000000,\"integral\":2000}"},"integral":2000}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:43 | INFO    | api_test:59 | 
+2026-03-06 16:28:43 | INFO    | api_test:60 | 
+2026-03-06 16:28:43 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.4, 'minWithdraw': 100}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:43 | INFO    | api_test:59 | 
+2026-03-06 16:28:43 | INFO    | api_test:60 | 
+2026-03-06 16:28:43 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 16:28:44","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:43 | INFO    | api_test:59 | 
+2026-03-06 16:28:43 | INFO    | api_test:60 | 
+2026-03-06 16:28:43 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:43 | INFO    | api_test:59 | 
+2026-03-06 16:28:43 | INFO    | api_test:60 | 
+2026-03-06 16:28:43 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:44 | INFO    | api_test:59 | 
+2026-03-06 16:28:44 | INFO    | api_test:60 | 
+2026-03-06 16:28:44 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.6, 'minWithdraw': 1000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:44 | INFO    | api_test:59 | 
+2026-03-06 16:28:44 | INFO    | api_test:60 | 
+2026-03-06 16:28:44 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 16:28:45","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:44 | INFO    | api_test:59 | 
+2026-03-06 16:28:44 | INFO    | api_test:60 | 
+2026-03-06 16:28:44 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 16:28:45 | INFO    | api_test:59 | 
+2026-03-06 16:28:45 | INFO    | api_test:60 | 
+2026-03-06 16:28:45 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.4秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:27 | INFO    | api_test:59 | 
+2026-03-06 17:17:27 | INFO    | api_test:60 | 
+2026-03-06 17:17:27 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.2, 'minWithdraw': 10}[0m
+[96m状态码: 200[0m
+[95m响应时间: 2.1秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:29 | INFO    | api_test:59 | 
+2026-03-06 17:17:29 | INFO    | api_test:60 | 
+2026-03-06 17:17:29 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 2.4秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 17:17:30","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:31 | INFO    | api_test:59 | 
+2026-03-06 17:17:31 | INFO    | api_test:60 | 
+2026-03-06 17:17:31 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 1.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:31 | INFO    | api_test:59 | 
+2026-03-06 17:17:31 | INFO    | api_test:60 | 
+2026-03-06 17:17:31 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.7秒[0m
+[33m响应报文:
+{"msg":"success","lolAmount":10.00000000,"code":0,"data":{"id":163,"userId":181615,"userName":null,"userType":1,"currency":"LOL","amount":10.00000000,"deductedAmount":10.00000000,"fee":0.02000000,"actualAmount":9.98000000,"chainId":"66","chainName":"BASE","walletAddress":"0xb738c553a56576a085aa9e33d827dc4b78310521","txHash":null,"blockHeight":null,"blockTime":null,"confirmations":0,"platform":"nexa","platformOrderId":"2029848846999654401","thirdPartyId":"WD1772788652471181615","ipAddress":"138.19.255.162","deviceInfo":"python-requests/2.32.5","riskLevel":0,"riskReason":null,"auditType":"auto","auditorId":null,"auditorName":null,"auditTime":null,"auditResult":null,"auditRemark":null,"retryCount":0,"failReason":null,"isRefunded":0,"refundTime":null,"status":1,"createTime":"2026-03-06 17:17:32","processTime":"2026-03-06 17:17:32","completeTime":null,"updateTime":"2026-03-06 17:17:32","remark":"","callbackData":null,"extraData":"{\"lolAmount\":10.00000000,\"integral\":2000}"},"integral":2000}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:32 | INFO    | api_test:59 | 
+2026-03-06 17:17:32 | INFO    | api_test:60 | 
+2026-03-06 17:17:32 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.4, 'minWithdraw': 100}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.9秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:32 | INFO    | api_test:59 | 
+2026-03-06 17:17:32 | INFO    | api_test:60 | 
+2026-03-06 17:17:32 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 17:17:33","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:33 | INFO    | api_test:59 | 
+2026-03-06 17:17:33 | INFO    | api_test:60 | 
+2026-03-06 17:17:33 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:34 | INFO    | api_test:59 | 
+2026-03-06 17:17:34 | INFO    | api_test:60 | 
+2026-03-06 17:17:34 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 1.0秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:34 | INFO    | api_test:59 | 
+2026-03-06 17:17:34 | INFO    | api_test:60 | 
+2026-03-06 17:17:34 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.6, 'minWithdraw': 1000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.5秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:35 | INFO    | api_test:59 | 
+2026-03-06 17:17:35 | INFO    | api_test:60 | 
+2026-03-06 17:17:35 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.4秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 17:17:36","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:36 | INFO    | api_test:59 | 
+2026-03-06 17:17:36 | INFO    | api_test:60 | 
+2026-03-06 17:17:36 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.8秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:17:38 | INFO    | api_test:59 | 
+2026-03-06 17:17:38 | INFO    | api_test:60 | 
+2026-03-06 17:17:38 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 1.9秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:32 | INFO    | api_test:59 | 
+2026-03-06 17:19:32 | INFO    | api_test:60 | 
+2026-03-06 17:19:32 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.2, 'minWithdraw': 10}[0m
+[96m状态码: 200[0m
+[95m响应时间: 2.5秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:32 | INFO    | api_test:59 | 
+2026-03-06 17:19:32 | INFO    | api_test:60 | 
+2026-03-06 17:19:32 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.7秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 17:19:33","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:33 | INFO    | api_test:59 | 
+2026-03-06 17:19:33 | INFO    | api_test:60 | 
+2026-03-06 17:19:33 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:33 | INFO    | api_test:59 | 
+2026-03-06 17:19:33 | INFO    | api_test:60 | 
+2026-03-06 17:19:33 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.5秒[0m
+[33m响应报文:
+{"msg":"success","lolAmount":10.00000000,"code":0,"data":{"id":164,"userId":181615,"userName":null,"userType":1,"currency":"LOL","amount":10.00000000,"deductedAmount":10.00000000,"fee":0.02000000,"actualAmount":9.98000000,"chainId":"66","chainName":"BASE","walletAddress":"0xb738c553a56576a085aa9e33d827dc4b78310521","txHash":null,"blockHeight":null,"blockTime":null,"confirmations":0,"platform":"nexa","platformOrderId":"2029849358797017089","thirdPartyId":"WD1772788774482181615","ipAddress":"138.19.255.162","deviceInfo":"python-requests/2.32.5","riskLevel":0,"riskReason":null,"auditType":"auto","auditorId":null,"auditorName":null,"auditTime":null,"auditResult":null,"auditRemark":null,"retryCount":0,"failReason":null,"isRefunded":0,"refundTime":null,"status":1,"createTime":"2026-03-06 17:19:34","processTime":"2026-03-06 17:19:34","completeTime":null,"updateTime":"2026-03-06 17:19:34","remark":"","callbackData":null,"extraData":"{\"lolAmount\":10.00000000,\"integral\":2000}"},"integral":2000}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:33 | INFO    | api_test:59 | 
+2026-03-06 17:19:33 | INFO    | api_test:60 | 
+2026-03-06 17:19:33 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.4, 'minWithdraw': 100}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:34 | INFO    | api_test:59 | 
+2026-03-06 17:19:34 | INFO    | api_test:60 | 
+2026-03-06 17:19:34 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 17:19:35","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:34 | INFO    | api_test:59 | 
+2026-03-06 17:19:34 | INFO    | api_test:60 | 
+2026-03-06 17:19:34 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:35 | INFO    | api_test:59 | 
+2026-03-06 17:19:35 | INFO    | api_test:60 | 
+2026-03-06 17:19:35 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.7秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:35 | INFO    | api_test:59 | 
+2026-03-06 17:19:35 | INFO    | api_test:60 | 
+2026-03-06 17:19:35 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.6, 'minWithdraw': 1000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:35 | INFO    | api_test:59 | 
+2026-03-06 17:19:35 | INFO    | api_test:60 | 
+2026-03-06 17:19:35 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.4秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"userId":181615,"userName":"1@qq.com","emailName":"1@qq.com","phone":"+5520322432","avatar":"https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg","sex":null,"openId":null,"wxId":null,"wxOpenId":null,"password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92","createTime":"2025-05-14 23:42:45","updateTime":"2026-03-06 16:09:14","appleId":null,"sysPhone":1,"status":1,"platform":"h5","jifen":null,"invitationCode":"94W3KS","googleOpenId":null,"facebookOpenId":null,"inviterCode":"778899","clientid":"null","zhiFuBao":null,"recipient":null,"bankNumber":null,"bankName":null,"bankAddress":null,"zhiFuBaoName":null,"rate":0.30,"twoRate":0.07,"onLineTime":"2026-03-06 17:19:36","qdCode":"3","requestNumber":null,"cardNumber":null,"isQdRate":null,"agentLevel":0,"hasPaid":1,"firstPayTime":"2025-12-19 21:33:46","cardMoney":null,"sysUserName":null,"member":null,"counts":null,"money":null,"endTime":null,"vipType":null,"vipLevel":null}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:36 | INFO    | api_test:59 | 
+2026-03-06 17:19:36 | INFO    | api_test:60 | 
+2026-03-06 17:19:36 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"success","code":0,"data":{"usdt":"9945.48","goldBean":"4684.70","currency":"ALL","usdc":"9945.48","userId":181615,"reel":"130.00000000"}}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:19:36 | INFO    | api_test:59 | 
+2026-03-06 17:19:36 | INFO    | api_test:60 | 
+2026-03-06 17:19:36 | INFO    | api_test:61 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.3秒[0m
+[33m响应报文:
+{"msg":"Withdrawal amount cannot be less than ${1} ${2}","code":500}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:39 | INFO    | api_test:70 | 
+2026-03-06 17:30:39 | INFO    | api_test:71 | 
+2026-03-06 17:30:39 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.2, 'minWithdraw': 10}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.6秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:40 | INFO    | api_test:70 | 
+2026-03-06 17:30:40 | INFO    | api_test:71 | 
+2026-03-06 17:30:40 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.6秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0,
+  "data": {
+    "userId": 181615,
+    "userName": "1@qq.com",
+    "emailName": "1@qq.com",
+    "phone": "+5520322432",
+    "avatar": "https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg",
+    "sex": null,
+    "openId": null,
+    "wxId": null,
+    "wxOpenId": null,
+    "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "createTime": "2025-05-14 23:42:45",
+    "updateTime": "2026-03-06 16:09:14",
+    "appleId": null,
+    "sysPhone": 1,
+    "status": 1,
+    "platform": "h5",
+    "jifen": null,
+    "invitationCode": "94W3KS",
+    "googleOpenId": null,
+    "facebookOpenId": null,
+    "inviterCode": "778899",
+    "clientid": "null",
+    "zhiFuBao": null,
+    "recipient": null,
+    "bankNumber": null,
+    "bankName": null,
+    "bankAddress": null,
+    "zhiFuBaoName": null,
+    "rate": 0.3,
+    "twoRate": 0.07,
+    "onLineTime": "2026-03-06 17:30:41",
+    "qdCode": "3",
+    "requestNumber": null,
+    "cardNumber": null,
+    "isQdRate": null,
+    "agentLevel": 0,
+    "hasPaid": 1,
+    "firstPayTime": "2025-12-19 21:33:46",
+    "cardMoney": null,
+    "sysUserName": null,
+    "member": null,
+    "counts": null,
+    "money": null,
+    "endTime": null,
+    "vipType": null,
+    "vipLevel": null
+  }
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:40 | INFO    | api_test:70 | 
+2026-03-06 17:30:40 | INFO    | api_test:71 | 
+2026-03-06 17:30:40 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0,
+  "data": {
+    "usdt": "9945.48",
+    "goldBean": "4684.70",
+    "currency": "ALL",
+    "usdc": "9945.48",
+    "userId": 181615,
+    "reel": "130.00000000"
+  }
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:41 | INFO    | api_test:70 | 
+2026-03-06 17:30:41 | INFO    | api_test:71 | 
+2026-03-06 17:30:41 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 1.0秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "lolAmount": 10.0,
+  "code": 0,
+  "data": {
+    "id": 165,
+    "userId": 181615,
+    "userName": null,
+    "userType": 1,
+    "currency": "LOL",
+    "amount": 10.0,
+    "deductedAmount": 10.0,
+    "fee": 0.02,
+    "actualAmount": 9.98,
+    "chainId": "66",
+    "chainName": "BASE",
+    "walletAddress": "0xb738c553a56576a085aa9e33d827dc4b78310521",
+    "txHash": null,
+    "blockHeight": null,
+    "blockTime": null,
+    "confirmations": 0,
+    "platform": "nexa",
+    "platformOrderId": "2029852159119888385",
+    "thirdPartyId": "WD1772789442132181615",
+    "ipAddress": "138.19.255.162",
+    "deviceInfo": "python-requests/2.32.5",
+    "riskLevel": 0,
+    "riskReason": null,
+    "auditType": "auto",
+    "auditorId": null,
+    "auditorName": null,
+    "auditTime": null,
+    "auditResult": null,
+    "auditRemark": null,
+    "retryCount": 0,
+    "failReason": null,
+    "isRefunded": 0,
+    "refundTime": null,
+    "status": 1,
+    "createTime": "2026-03-06 17:30:42",
+    "processTime": "2026-03-06 17:30:42",
+    "completeTime": null,
+    "updateTime": "2026-03-06 17:30:42",
+    "remark": "",
+    "callbackData": null,
+    "extraData": "{\"lolAmount\":10.00000000,\"integral\":2000}"
+  },
+  "integral": 2000
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:41 | INFO    | api_test:70 | 
+2026-03-06 17:30:41 | INFO    | api_test:71 | 
+2026-03-06 17:30:41 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.4, 'minWithdraw': 100}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:41 | INFO    | api_test:70 | 
+2026-03-06 17:30:41 | INFO    | api_test:71 | 
+2026-03-06 17:30:41 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0,
+  "data": {
+    "userId": 181615,
+    "userName": "1@qq.com",
+    "emailName": "1@qq.com",
+    "phone": "+5520322432",
+    "avatar": "https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg",
+    "sex": null,
+    "openId": null,
+    "wxId": null,
+    "wxOpenId": null,
+    "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "createTime": "2025-05-14 23:42:45",
+    "updateTime": "2026-03-06 16:09:14",
+    "appleId": null,
+    "sysPhone": 1,
+    "status": 1,
+    "platform": "h5",
+    "jifen": null,
+    "invitationCode": "94W3KS",
+    "googleOpenId": null,
+    "facebookOpenId": null,
+    "inviterCode": "778899",
+    "clientid": "null",
+    "zhiFuBao": null,
+    "recipient": null,
+    "bankNumber": null,
+    "bankName": null,
+    "bankAddress": null,
+    "zhiFuBaoName": null,
+    "rate": 0.3,
+    "twoRate": 0.07,
+    "onLineTime": "2026-03-06 17:30:42",
+    "qdCode": "3",
+    "requestNumber": null,
+    "cardNumber": null,
+    "isQdRate": null,
+    "agentLevel": 0,
+    "hasPaid": 1,
+    "firstPayTime": "2025-12-19 21:33:46",
+    "cardMoney": null,
+    "sysUserName": null,
+    "member": null,
+    "counts": null,
+    "money": null,
+    "endTime": null,
+    "vipType": null,
+    "vipLevel": null
+  }
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:42 | INFO    | api_test:70 | 
+2026-03-06 17:30:42 | INFO    | api_test:71 | 
+2026-03-06 17:30:42 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0,
+  "data": {
+    "usdt": "9945.48",
+    "goldBean": "4684.70",
+    "currency": "ALL",
+    "usdc": "9945.48",
+    "userId": 181615,
+    "reel": "130.00000000"
+  }
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:42 | INFO    | api_test:70 | 
+2026-03-06 17:30:42 | INFO    | api_test:71 | 
+2026-03-06 17:30:42 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "Withdrawal amount cannot be less than ${1} ${2}",
+  "code": 500
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:42 | INFO    | api_test:70 | 
+2026-03-06 17:30:42 | INFO    | api_test:71 | 
+2026-03-06 17:30:42 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://admin.testshort.top/sqx_fast/admin/crypto/network/update[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'e44f2cbd4a7f859b4d045237173276fe', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'id': 5, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.6, 'minWithdraw': 1000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:42 | INFO    | api_test:70 | 
+2026-03-06 17:30:42 | INFO    | api_test:71 | 
+2026-03-06 17:30:42 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/user/selectUserById[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0,
+  "data": {
+    "userId": 181615,
+    "userName": "1@qq.com",
+    "emailName": "1@qq.com",
+    "phone": "+5520322432",
+    "avatar": "https://oss.reelchain.art/20251221/43dfbbb960dc4646a693d2b8d37c5c3f.jpg",
+    "sex": null,
+    "openId": null,
+    "wxId": null,
+    "wxOpenId": null,
+    "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "createTime": "2025-05-14 23:42:45",
+    "updateTime": "2026-03-06 16:09:14",
+    "appleId": null,
+    "sysPhone": 1,
+    "status": 1,
+    "platform": "h5",
+    "jifen": null,
+    "invitationCode": "94W3KS",
+    "googleOpenId": null,
+    "facebookOpenId": null,
+    "inviterCode": "778899",
+    "clientid": "null",
+    "zhiFuBao": null,
+    "recipient": null,
+    "bankNumber": null,
+    "bankName": null,
+    "bankAddress": null,
+    "zhiFuBaoName": null,
+    "rate": 0.3,
+    "twoRate": 0.07,
+    "onLineTime": "2026-03-06 17:30:43",
+    "qdCode": "3",
+    "requestNumber": null,
+    "cardNumber": null,
+    "isQdRate": null,
+    "agentLevel": 0,
+    "hasPaid": 1,
+    "firstPayTime": "2025-12-19 21:33:46",
+    "cardMoney": null,
+    "sysUserName": null,
+    "member": null,
+    "counts": null,
+    "money": null,
+    "endTime": null,
+    "vipType": null,
+    "vipLevel": null
+  }
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:42 | INFO    | api_test:70 | 
+2026-03-06 17:30:42 | INFO    | api_test:71 | 
+2026-03-06 17:30:42 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance[0m
+[92m请求的方法: GET[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: [0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "success",
+  "code": 0,
+  "data": {
+    "usdt": "9945.48",
+    "goldBean": "4684.70",
+    "currency": "ALL",
+    "usdc": "9945.48",
+    "userId": 181615,
+    "reel": "130.00000000"
+  }
+}[0m
+[97m--------------------------------------------------------------------------------[0m
+2026-03-06 17:30:43 | INFO    | api_test:70 | 
+2026-03-06 17:30:43 | INFO    | api_test:71 | 
+2026-03-06 17:30:43 | INFO    | api_test:72 | 
+[97m--------------------------------------------------------------------------------[0m
+[96m请求的URL: https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw[0m
+[92m请求的方法: POST[0m
+[93m请求的Headers: {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODE2MTUiLCJpYXQiOjE3NzI3ODQ1NTQsImV4cCI6MTc3MzM4OTM1NH0.PMS3xG7aXqaEN-45EnDfDfuN32P3b0EV54zt34NAipy683ZXvgH10ovLu4IgFxAVjhomsr5FfeMOVksKAdna2Q', 'Content-Type': 'application/json'}[0m
+[94m入参报文: {'address': '0xb738c553a56576a085aa9e33d827dc4b78310521', 'chainId': '66', 'integral': 2000}[0m
+[96m状态码: 200[0m
+[95m响应时间: 0.2秒[0m
+[33m响应报文:
+{
+  "msg": "Withdrawal amount cannot be less than ${1} ${2}",
+  "code": 500
+}[0m
+[97m--------------------------------------------------------------------------------[0m

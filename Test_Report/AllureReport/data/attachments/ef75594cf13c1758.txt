@@ -1,0 +1,8 @@
+[32mINFO    [0m test:conftest.py:188 >> 开始: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_then_chain_apis[修改币种配置-正常请求_1]
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): admin.testshort.top:443
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://admin.testshort.top:443 "POST /sqx_fast/admin/crypto/network/update HTTP/1.1" 200 None
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): www.testshort.top:443
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://www.testshort.top:443 "GET /sqx_fast/app/user/selectUserById HTTP/1.1" 200 None
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://www.testshort.top:443 "GET /sqx_fast/app/cash/getCryptoBalance HTTP/1.1" 200 None
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://www.testshort.top:443 "POST /sqx_fast/app/integral/creditsExchangeToLolWithdraw HTTP/1.1" 200 None
+[32mINFO    [0m test:conftest.py:193 << 结束: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_then_chain_apis[修改币种配置-正常请求_1]  用例耗时: 1.8秒

@@ -18,8 +18,8 @@
   tokenId: "0xc7Ef0284223D188Ccbd71797922946ac0058dFA9"
   withdrawFeeRate: 0.4
   'minWithdraw': 100
-  code: 1
-  msg: success1
+  code: 0
+  msg: success
 
 - case_name: "修改币种配置-正常请求"
   method: POST
@@ -28,5 +28,5 @@
   tokenId: "0xc7Ef0284223D188Ccbd71797922946ac0058dFA9"
   withdrawFeeRate: 0.6
   'minWithdraw': 1000
-  code: 2
-  msg: success2
+  code: 0
+  msg: success
