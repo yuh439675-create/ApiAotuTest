@@ -3,7 +3,7 @@ from Common.yaml_config import GetConfig
 
 
 # 配置类字段，不入请求体
-_BODY_SKIP_KEYS = ("username", "password", "path", "token_field", "username_key", "password_key", "url", "base_url")
+_BODY_SKIP_KEYS = ("username", "password", "path", "token_field", "username_key", "password_key", "url", "base_url", "emailName")
 
 
 def login(user):
@@ -23,7 +23,10 @@ def login(user):
 
     username_key = u.get("username_key", "emailName")
     password_key = u.get("password_key", "password")
-    data = {username_key: u["username"], password_key: u["password"]}
+    username_value = u.get("username") or u.get("emailName")
+    if username_value is None:
+        raise ValueError(f"user '{user}' 必须配置 username 或 emailName")
+    data = {username_key: username_value, password_key: u["password"]}
     if username_key == "emailName":
         data["isFirebaseEmail"] = "0"
 

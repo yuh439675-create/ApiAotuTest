@@ -1,0 +1,1 @@
+{'id': 2, 'currencyId': 2, 'tokenId': '0xc7Ef0284223D188Ccbd71797922946ac0058dFA9', 'withdrawFeeRate': 0.4, 'minWithdraw': 100}

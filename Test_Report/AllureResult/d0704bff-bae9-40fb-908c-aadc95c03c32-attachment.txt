@@ -1,2 +1,0 @@
-[32mINFO    [0m test:conftest.py:163 >> 开始: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_and_use_token
-[32mINFO    [0m test:conftest.py:168 << 结束: Test_Case/test_scenario_demo.py::TestScenarioDemo::test_login_and_use_token  用例耗时: 0.0秒

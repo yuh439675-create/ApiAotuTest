@@ -1,9 +1,0 @@
-用例总耗时: 2.4秒
-
-序号    方法      接口URL                                                                                              耗时
-------------------------------------------------------------------------------------------------------------------------
-1     GET     https://www.testshort.top/sqx_fast/app/user/selectUserById                                       1.4秒
-2     GET     https://www.testshort.top/sqx_fast/app/cash/getCryptoBalance                                     0.5秒
-3     POST    https://www.testshort.top/sqx_fast/app/integral/creditsExchangeToLolWithdraw                     0.5秒
-------------------------------------------------------------------------------------------------------------------------
-合计            共 3 个请求                                                                                          2.3秒
