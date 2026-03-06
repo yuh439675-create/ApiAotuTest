@@ -42,7 +42,7 @@ _C = {
 
 
 def _log_to_console(request_url, request_method, request_headers, data, status_code, response_time, body):
-    """控制台输出请求/响应信息，每行不同颜色（五颜六色）"""
+    """控制台输出：时间戳 → 分隔线 → 请求的URL..."""
     sep = f"{_C['sep']}{'-' * 80}{_COLOR_RESET}"
     sc = _C["status_ok"] if status_code == 200 else _C["status_err"]
     lines = [
@@ -56,7 +56,9 @@ def _log_to_console(request_url, request_method, request_headers, data, status_c
         f"{_C['body']}响应报文:\n{body}{_COLOR_RESET}",
         sep,
     ]
-    log.info("\n\n\n" + "\n".join(lines))
+    log.info("")
+    log.info("")
+    log.info("\n" + "\n".join(lines))
 
 
 def deal_with_res(data, res, request_url, request_method, request_headers, response_time):
